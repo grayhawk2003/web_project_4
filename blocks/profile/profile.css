@@ -1,0 +1,23 @@
+@import url(../profile/__avatar/profile__avatar.css);
+@import url(../profile/__info/profile__info.css);
+@import url(../profile/__picture/profile__picture.css);
+@import url(../profile/__title/profile__title.css);
+@import url(../profile/__vector/profile__vector.css);
+@import url(../profile/__rectangle/profile__rectangle.css);
+@import url(../profile/__explorer/profile__explorer.css);
+@import url(../profile/__plus/profile__plus.css);
+@import url(../profile/__add-button/profile__add-button.css);
+@import url(../profile/__vector-box/profile__vector-box.css);
+@import url(../profile/__edit-button/profile__edit-button.css);
+
+
+
+.profile {
+    width: calc(100% - 400px);
+    margin: 40px auto 50px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    align-items: center;
+    
+}

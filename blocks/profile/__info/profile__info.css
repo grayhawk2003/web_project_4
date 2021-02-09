@@ -1,0 +1,23 @@
+.profile__info {
+    /*width: calc(100% - 865px);*/
+    display: grid;
+    grid-template-columns: 90% 1fr;
+    grid-template-rows: 1fr 28%;
+    grid-column-gap: 18px;
+    grid-row-gap: 16px;
+    margin-right: 165px;
+    margin-left: 30px;
+    
+
+}
+
+/*.place {
+    display: grid;
+    grid-template-columns: 47% 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 48px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    margin-bottom: 81px;
+  }*/

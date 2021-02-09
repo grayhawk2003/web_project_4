@@ -1,0 +1,6 @@
+.profile__add-button {
+    background-image: url(../../../images/profile-plus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+}
