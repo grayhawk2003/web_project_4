@@ -1,0 +1,17 @@
+@import url(../footer/__copyright/footer__copyright.css);
+
+.footer {
+    width: calc(100% - 962px);
+    justify-content: left;
+    margin-left: 200px;
+
+}
+
+/*.header {
+    width: calc(100% - 400px);
+    display: flex;
+    flex-direction: column;
+    margin: 45px auto 0;
+    align-content: flex-start;
+    
+}
