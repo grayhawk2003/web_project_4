@@ -18,6 +18,20 @@
     display: flex;
     flex-wrap: wrap;
     color: white;
-    align-items: center;
-    
+    align-items: center;  
+    border: solid 1px blue;  
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+      width: calc(100% - 240px);
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .profile {
+      width: calc(100% - 38px);
+      
+    }
 }

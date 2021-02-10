@@ -7,8 +7,26 @@
     grid-row-gap: 16px;
     margin-right: 165px;
     margin-left: 30px;
-    
+}
 
+
+@media screen and (max-width: 768px) {
+    .profile__info {
+        margin-right: 30px;
+        /*width: calc(100% - )*/
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .profile__info {
+      width: calc(100% - 38px);  
+      display: flex;
+      flex-wrap: wrap;
+      
+      margin: 0 auto;
+      
+    }
 }
 
 /*.place {

@@ -4,14 +4,21 @@
     width: calc(100% - 962px);
     justify-content: left;
     margin-left: 200px;
+    border: solid 1px red;
 
 }
 
-/*.header {
-    width: calc(100% - 400px);
-    display: flex;
-    flex-direction: column;
-    margin: 45px auto 0;
-    align-content: flex-start;
-    
+@media screen and (max-width: 768px) {
+    .footer {
+      width: calc(100% - 468px);
+      margin-left: 120px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .footer {
+      width: calc(100% - 38px);
+      margin: 0 auto 36px;
+    }
 }
