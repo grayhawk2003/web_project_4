@@ -1,0 +1,21 @@
+@import url(../element/__image-container/element__image-container.css);
+@import url(../element/__image/element__image.css);
+@import url(../element/__heart/element__heart.css);
+@import url(../element/__content/element__content.css);
+@import url(../element/__title/element__title.css);
+
+.element {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+/*.photo-grid__item {
+    width: 100%;
+    height: auto;
+  }
+

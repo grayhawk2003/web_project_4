@@ -1,6 +1,11 @@
-@import url(../header/__logo/);
-@import url(../header/__line/);
+@import url(../header/__logo/header__logo.css);
+@import url(../header/__line/header.line.css);
 
 .header {
-
+    width: calc(100% - 400px);
+    display: flex;
+    flex-direction: column;
+    margin: 45px auto 0;
+    align-content: flex-start;
+    
 }

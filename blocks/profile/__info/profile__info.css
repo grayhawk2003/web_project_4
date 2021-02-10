@@ -1,5 +1,5 @@
 .profile__info {
-    /*width: calc(100% - 865px);*/
+  
     display: grid;
     grid-template-columns: 90% 1fr;
     grid-template-rows: 1fr 28%;
