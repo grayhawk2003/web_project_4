@@ -20,6 +20,7 @@
     color: white;
     align-items: center;  
     border: solid 1px blue;  
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {
