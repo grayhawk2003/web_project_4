@@ -1,6 +1,9 @@
 .element__content {
-   
+    width: calc(100% - 36px);
+    background-color: white;
+    /*padding: 2px 16px;*/
     display: flex;
-    margin: 25px, 21px, 31px, 15px;
+    /*margin: 25px, 21px, 31px, 15px;*/
     justify-content: space-between;
+    padding: 0;
 }

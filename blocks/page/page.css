@@ -3,4 +3,9 @@
     background-color: black;
     font-family: 'Inter', sans-serif;
     margin: auto;
+   
   }
+
+* {
+  box-sizing: border-box;
+}
