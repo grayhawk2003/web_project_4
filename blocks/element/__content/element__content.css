@@ -1,6 +1,5 @@
 .element__content {
     width: calc(100% - 36px);
-    background-color: white;
     padding: 25px 21px 31px 15px;
     display: flex;
     /*margin: 25px, 21px, 31px, 15px;*/
