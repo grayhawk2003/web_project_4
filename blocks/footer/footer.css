@@ -1,24 +1,29 @@
 @import url(../footer/__copyright/footer__copyright.css);
 
 .footer {
-    width: calc(100% - 962px);
-    justify-content: left;
-    margin-left: 200px;
-    border: solid 1px red;
+    width: 880px;;
+    margin: 0 auto 60px;
+    align-items: flex-start;
+    /*text-align: left; */  
+    color: #545454;
 
 }
 
-@media screen and (max-width: 768px) {
-    .footer {
-      width: calc(100% - 468px);
-      margin-left: 120px;
-    }
+@media screen and (max-width: 930px) {
+  .footer{
+    width: 581px;
+    
+    
+  }
 }
 
 
-@media screen and (max-width: 450px) {
-    .footer {
-      width: calc(100% - 38px);
-      margin: 0 auto 36px;
-    }
+
+
+@media screen and (max-width: 550px) {
+  .footer{
+    width: 282px;
+    margin: 0 auto 36px;
+    
+  }
 }

@@ -2,13 +2,10 @@
 @import url(../profile/__info/profile__info.css);
 @import url(../profile/__picture/profile__picture.css);
 @import url(../profile/__title/profile__title.css);
-@import url(../profile/__vector/profile__vector.css);
-@import url(../profile/__rectangle/profile__rectangle.css);
 @import url(../profile/__explorer/profile__explorer.css);
-@import url(../profile/__plus/profile__plus.css);
 @import url(../profile/__add-button/profile__add-button.css);
-@import url(../profile/__vector-box/profile__vector-box.css);
 @import url(../profile/__edit-button/profile__edit-button.css);
+@import url(../profile/__info-top/profile__info-top.css);
 
 
 
@@ -19,19 +16,27 @@
     flex-wrap: wrap;
     color: white;
     align-items: center;  
-    border: solid 1px blue;  
-    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+   
+    
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1130px) {
     .profile {
       width: calc(100% - 240px);
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      text-align: center;
     }
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
     .profile {
+      margin: 70.25px auto 36px;
+      /*align-content: center;*/
       width: calc(100% - 38px);
       
     }

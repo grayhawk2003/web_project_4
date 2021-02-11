@@ -3,23 +3,17 @@
 @import url(../element/__heart/element__heart.css);
 @import url(../element/__content/element__content.css);
 @import url(../element/__title/element__title.css);
+@import url(../element/__bottom/element__bottom.css);
 
 .element {
-    background-image: url(../../images/card-white-rectangle.png);
-    width: 100%; 
+    background-color: white;
+    width: 282px; 
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border-radius: 0 0 5px 5px;
-    
-    
-
+    border-radius: 10px;
 }
 
 
 
-/*.photo-grid__item {
-    width: 100%;
-    height: auto;
-  }
 

@@ -1,12 +1,6 @@
 .profile__edit-button {
-    background-image: url(../../../images/profile-vector.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: auto;
-    width: 100%;   
-    object-fit: contain;
-    align-self: flex-end;
-    margin-bottom: 6px;
-    
+    height: 24px;
+    width: 24px;   
+    margin-left: 18px;
 
 }

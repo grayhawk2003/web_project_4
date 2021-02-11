@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
     <title>Around the US</title>
   </head>
 
@@ -19,16 +21,16 @@
           <img src="images/jacques.jpg" alt="jacques cousteau image" class="profile__picture">
         </div> 
 
-        <div class="profile__info">                     
-          <img src="images/profile-name.png" alt="jacques name text" class="profile__title">
-          <img src="images/profile-vector-box.png" alt="little white pencil" class="profile__edit-button">                 
-          <img src="images/profile-explorer.png" alt="explorer" class="profile__explorer">          
+        <div class="profile__info">    
+          <div class="profile__info-top">             
+            <h2 class="profile__title">Jacques Cousteau</h2>
+            <img src="images/edit-button.png" alt="edit button" class="profile__edit-button">     
+          </div>               
+          <h3 class="profile__explorer">Explorer</h3>        
         </div>
 
-        <img src="images/profile-rectangle.png" alt="add button rectangle" class="profile__add-button">  
-          <!--<img src="images/profile-rectangle.png" alt="button rectangle" class="profile__rectangle">
-          <img src="images/profile-plus.png" alt="button plus sign" class="profile__plus">
-        </div>   -->
+        <img src="images/add-button.png" alt="add button" class="profile__add-button">  
+         
     </section>
 
     <section class="elements">
@@ -37,9 +39,11 @@
         <div class="element__image-container"> 
           <img src="images/yosemite.png" alt="yosemite valley" class="element__image">
         </div>
-        <div class="element__content">
-          <img src="images/yosemite-text.png" alt="bald mountain text" class="element__title">
-          <img src="images/heart.png" alt="heart" class="element__heart">
+        <div class="element__bottom">
+          <div class="element__content">
+            <h2 class="element__title">Yosemite Valley</h2>
+            <img src="images/heart.png" alt="heart" class="element__heart">
+        </div>
         </div>
       </div>
 
@@ -47,19 +51,23 @@
         <div class="element__image-container">
           <img src="images/louise.png" alt="lake louise" class="element__image">
         </div>
-        <div class="element__content">
-          <img src="images/louise-text.png" alt="lake louise text" class="element__title">
-          <img src="images/heart.png" alt="heart" class="element__heart">
-        </div>
+        <div class="element__bottom">  
+          <div class="element__content">
+            <h2 class="element__title">Lake Louise</h2>
+            <img src="images/heart.png" alt="heart" class="element__heart">
+          </div>
+        </div>  
       </div>
 
       <div class="element"> 
         <div class="element__image-container">
           <img src="images/bald.png" alt="bald mountain" class="element__image">
         </div>
-        <div class="element__content">
-          <img src="images/bald-text.png" alt="bald mountain text" class="element__title">
-          <img src="images/heart.png" alt="heart" class="element__heart">
+        <div class="element__bottom">
+          <div class="element__content">
+            <h2 class="element__title">Bald Mountain</h2>
+            <img src="images/heart.png" alt="heart" class="element__heart">
+          </div>
         </div>
       </div>
 
@@ -67,9 +75,11 @@
         <div class="element__image-container">
           <img src="images/latemar.png" alt="latemar" class="element__image">
         </div>
-        <div class="element__content">
-          <img src="images/latemar-text.png" alt="latemar text" class="element__title">
-          <img src="images/heart.png" alt="heart" class="element__heart">
+        <div class="element__bottom">
+          <div class="element__content">
+            <h2 class="element__title">Latemar</h2>
+            <img src="images/heart.png" alt="heart" class="element__heart">
+          </div>
         </div>
       </div>
 
@@ -77,9 +87,11 @@
         <div class="element__image-container">
           <img src="images/vanoise.png" alt="vanoise national park" class="element__image">
         </div>
-        <div class="element__content">
-          <img src="images/vanoise-text.png" alt="vanoise text" class="element__title">
-          <img src="images/heart.png" alt="heart" class="element__heart">
+        <div class="element__bottom">
+          <div class="element__content">
+            <h2 class="element__title">Vanoise Nationa</h2>
+            <img src="images/heart.png" alt="heart" class="element__heart">
+          </div>
         </div>
       </div>
 
@@ -87,9 +99,11 @@
         <div class="element__image-container">
           <img src="images/lago.png" alt="lago di briaes" class="element__image">
         </div>
-        <div class="element__content">
-          <img src="images/lago-text.png" alt="lago text" class="element__title">
-          <img src="images/heart.png" alt="heart" class="element__heart">
+        <div class="element__bottom">
+          <div class="element__content">
+            <h2 class="element__title"> Lago di Braies</h2>
+            <img src="images/heart.png" alt="heart" class="element__heart">
+          </div>
         </div>
       </div>
     </section>
@@ -98,6 +112,6 @@
 
   </body>
   <footer class ="footer">
-    <img src="images/copyright.png" alt="2020 around the world" class="footer__copyright">
+    <p class="footer__copyright">&copy;2020. Around the US</p>
   </footer>
 </html>       
