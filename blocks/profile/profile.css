@@ -16,9 +16,7 @@
     flex-wrap: wrap;
     color: white;
     align-items: center;  
-    font-family: 'Inter', sans-serif;
-   
-    
+    font-family: 'Inter', sans-serif;      
 }
 
 @media screen and (max-width: 1130px) {

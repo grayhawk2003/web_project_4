@@ -6,6 +6,7 @@
 @import url(../element/__bottom/element__bottom.css);
 
 .element {
+    max-width: 282px;
     background-color: white;
     width: 282px; 
     display: flex;
