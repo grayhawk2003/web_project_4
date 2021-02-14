@@ -1,8 +1,23 @@
 @import url(../modal/__form-control/modal__form-control.css);
 @import url(../modal/__form-submit/modal__form-submit.css);
+@import url(../modal/__title/modal__title.css);
+@import url(../modal/__form/modal__form.css);
+
 
 .modal {
-    align-items: center;
+    height: 330px;
+    width: 430px;
+    border-radius: 10px;
+    /*display: none;*/  
     background-color: white;
-    border: 
+    border: none;
+    margin: 10px auto;
+    /*position: absolute;*/
+}
+
+@media screen and (max-width: 550px) {
+    .modal {
+        width: 282px;
+        height: 322px;
+    }
 }

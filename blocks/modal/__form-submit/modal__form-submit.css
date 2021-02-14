@@ -1,14 +1,23 @@
 .modal__form-submit {
     background-color: black;
-    border: none;
     color: white;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: normal;
     font-style: normal;
+    margin: 0 36px 36.5px;
     line-height: 21.78px;
     width: 358px;
     height: 50.15px;
-    margin: 48px 36px 36.51px;
+    border: 0;
+    border-radius: 2px;
+
+}
+
+@media screen and (max-width: 550px) {
+    .modal__form-submit {
+        width: 238px;
+        margin: 0 22px 25px;
+    }
 }

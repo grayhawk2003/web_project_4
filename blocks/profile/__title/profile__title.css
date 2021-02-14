@@ -4,16 +4,10 @@
     font-weight: 500;
     font-style: normal;  
     margin-bottom: 0;
-
-    
+    align-items: baseline;  
 }
 
-/*@media screen and (max-width: 1135px) {
-    .profile__title {
-        font-size: 30px;
-        line-height: 35px;
-    }
-}*/
+
 
 @media screen and (max-width: 675px) {
     .profile__title {
@@ -22,10 +16,10 @@
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
     .profile__title {
         font-size: 22px;
-        line-height: 26.63px;
+        line-height: 27px;
     }
 }
 

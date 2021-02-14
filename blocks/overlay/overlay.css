@@ -1,7 +1,11 @@
 .overlay {
-    /*background-color: white;
-    /*position: fixed;
-    height: 330px;
-    width: 440px;*/
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
 
 }

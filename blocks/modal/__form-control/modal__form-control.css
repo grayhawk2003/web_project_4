@@ -1,7 +1,27 @@
 .modal__form-control {
+    width: 358px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
     line-height: 16.94px;
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0 36px 30px;
+    border: none;
+    border-bottom: 1px solid black;    
+    border-color: black, 0.2;
+    outline: none;     
+}
+
+.modal__form-control:last-child {
+    margin-top: 30px;
+    margin-bottom: 48px;
+}
+
+@media screen and (max-width: 550px) {
+    .modal__form-control {
+        width: 238px;
+        margin: 0 22px 30px;
+    }
 }
