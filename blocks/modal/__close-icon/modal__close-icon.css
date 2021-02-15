@@ -1,0 +1,23 @@
+.modal__close-icon {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 146.72px;
+    left: 66.15%; 
+    right: 29.43125%;
+    margin: 0;
+    display: none;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 550px) {
+    .modal__close-icon {
+        width: 26px;
+        height: 26px;
+        top: 72.62px;
+        left: 82.69375%;
+        right: 5.8%;
+    }
+}
+
