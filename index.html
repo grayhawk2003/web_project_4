@@ -96,18 +96,22 @@
         </div>
       </section>
 
-      <div class="modal">
-        <form class="modal__form" action="#" method="POST">
-          <h2 class="modal__title">Edit profile</h2>
-          <input type="text" id="name" name="name" class="modal__form-control" placeholder="Jacques Cousteau">         
-          <input type="text" id="occupation" name="occupation" class="modal__form-control" placeholder="Explorer">         
-          <button class="modal__form-submit">Save</button>
-        </form>
-      </div>   
-      <img src="images/modal-close-icon.png" class="modal__close-icon">
       
-      <div class="overlay">
-      </div>
+      <div class="modal">
+        <div class="modal__container">
+          <button aria-label="Close Form" type="button" class="modal__close-button">
+             <span></span><img src="images/modal-close-icon.png" alt="X" class="modal__close-icon"></span>
+          </button>
+          <form class="modal__form" action="#" method="POST">
+            <h2 class="modal__title">Edit profile</h2>
+            <input type="text" id="name" name="name" class="modal__form-control" required placeholder="Jacques Cousteau">         
+            <input type="text" id="occupation" name="occupation" class="modal__form-control" required placeholder="Explorer">         
+            <button aria-label="Submit Form" type="submit" class="modal__form-submit">Save</button>
+          </form>
+        </div>
+      </div>  
+
+      <div class="overlay"></div>
 
 
 

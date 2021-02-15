@@ -1,23 +1,17 @@
 .modal__close-icon {
+    object-fit: contain;
+    vertical-align: center;
+    position: fixed;
     height: 40px;
     width: 40px;
-    position: fixed;
-    top: 146.72px;
-    left: 66.15%; 
-    right: 29.43125%;
-    margin: 0;
-    display: block;
-    z-index: 1;
-}
+    position: relative;
 
+}
 
 @media screen and (max-width: 550px) {
     .modal__close-icon {
-        width: 26px;
         height: 26px;
-        top: 72.62px;
-        left: 82.69375%;
-        right: 5.8%;
+        width: 26px;
     }
 }
 

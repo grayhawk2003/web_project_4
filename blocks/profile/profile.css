@@ -18,7 +18,10 @@
     flex-wrap: wrap;
     color: white;
     align-items: center;  
-    font-family: 'Inter', sans-serif;      
+    font-family: 'Inter', sans-serif;    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;  
 }
 
 @media screen and (max-width: 1130px) {

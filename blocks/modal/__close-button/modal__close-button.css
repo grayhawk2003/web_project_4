@@ -1,0 +1,28 @@
+.modal__close-button {
+    background: black;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    box-sizing: content-box;
+    /*position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  */   
+    margin-top: -40px;
+    margin-left: 430px;
+    display: block;
+    z-index: 1;
+    border: none;
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+    .modal__close-button {
+        width: 26px;
+        height: 26px;
+        margin-top: 53.62;
+        margin-left: auto;
+    }
+}
