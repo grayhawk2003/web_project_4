@@ -1,12 +1,12 @@
 .modal__close-icon {
     height: 40px;
     width: 40px;
-    position: absolute;
+    position: fixed;
     top: 146.72px;
     left: 66.15%; 
     right: 29.43125%;
     margin: 0;
-    display: none;
+    display: block;
     z-index: 1;
 }
 
