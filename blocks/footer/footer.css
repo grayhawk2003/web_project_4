@@ -1,10 +1,9 @@
 @import url(../footer/__copyright/footer__copyright.css);
 
 .footer {
-    width: 880px;;
+    width: 880px;
     margin: 0 auto 60px;
     align-items: flex-start;
-    /*text-align: left; */  
     color: #545454;
 
 }

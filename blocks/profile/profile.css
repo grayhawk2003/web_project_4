@@ -9,19 +9,17 @@
 @import url(../profile/__add-button-plus/profile__add-button-plus.css);
 @import url(../profile/__edit-button-vector/profile__edit-button-vector.css);
 
-
-
 .profile {
     width: calc(100% - 400px);
     margin: 40px auto 50px;
     display: flex;
     flex-wrap: wrap;
     color: white;
-    align-items: center;  
+    align-items: center;
     font-family: 'Inter', sans-serif;    
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1130px) {

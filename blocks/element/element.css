@@ -8,7 +8,7 @@
 .element {
     max-width: 282px;
     background-color: white;
-    width: 282px; 
+    width: 282px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
