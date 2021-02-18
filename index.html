@@ -21,11 +21,11 @@
         <div class="profile__info">
           <div class="profile__info-top">
             <h1 class="profile__title">Jacques Cousteau</h1>
-            <button class="profile__edit-button" type="button"><img src="images/edit-button-vector.png" class="profile__edit-button-vector"></button>
+            <button class="profile__edit-button" type="button"><img src="images/edit-button-vector.png" class="profile__edit-button-vector" alt="edit button vector"></button>
           </div>
           <h3 class="profile__occupation">Explorer</h3>
         </div>
-        <button class="profile__add-button" type="button"><img src="images/add-button-plus.png" class="profile__add-button-plus"></button>  
+        <button class="profile__add-button" type="button"><img src="images/add-button-plus.png" class="profile__add-button-plus" alt="add button"></button>  
       </section>
       <section class="elements">
         <div class="element">
@@ -100,37 +100,22 @@
       <div class="modal">
         <div class="modal__container">
           <button aria-label="Close Form" type="button" class="modal__close-button">
-             <span></span><img src="images/modal-close-icon.png" alt="X" class="modal__close-icon"></span>
+             <span><img src="images/modal-close-icon.png" alt="X" class="modal__close-icon"></span>
           </button>
           <form class="modal__form" action="#" method="POST">
             <h2 class="modal__title">Edit profile</h2>
             <input type="text" id="name" name="name" class="modal__form-control modal__form-name" required placeholder="Jacques Cousteau">         
             <input type="text" id="occupation" name="occupation" class="modal__form-control modal__form-occupation" required placeholder="Explorer">    
-            <!--<input type="button" value="Submit" onclick="modal__form-control">-->
              
            <button aria-label="Submit Form" type="submit" class="modal__form-submit">Save</button>  
           </form>
         </div>
       </div>  
-
       <div class="overlay"></div>
 
-
-
-
-          
-
-    
-
     </main>
-
-
-    
-
-     
     <script src="./scripts/index.js"></script>
   </body>
-  <footer class="footer">
-    <p class="footer__copyright">&copy;2020. Around the US</p>
-  </footer>
+  <footer class="footer"><p class="footer__copyright">&copy;2020. Around the US</p></footer>
+
 </html>

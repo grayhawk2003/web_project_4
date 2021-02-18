@@ -9,10 +9,12 @@ let formName = document.querySelector('.modal__form-name');
 let formOccupation = document.querySelector('.modal__form-occupation');
     
 
-editButton.addEventListener('click', function() {
+editButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
     modal.style.display = 'block';
     overlay.style.display = 'block';
     closeButton.style.display = 'block';
+    
 });
 
 closeButton.addEventListener('click', function() {
@@ -21,26 +23,32 @@ closeButton.addEventListener('click', function() {
     overlay.style.display = 'none'
 });
 
-/*function formInputName() 
-profileName.textContent = formName.value;
-profileOccupation.textContent = formOccupation.value;*/
-
-
-submitButton.addEventListener('input', function(evt) {
-    evt.preventDefault();
+function closeModal () {
     modal.style.display = 'none';
     overlay.style.display = 'none';
     closeButton.style.display = 'none';
+}
+
+submitButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    closeModal ();
     profileName.textContent = formName.value;
     profileOccupation.textContent = formOccupation.value;
+});    
 
-});
 
-/*
-function sayHello() {  /* function outside the event listener?*/
-    /*console.log("Hello Console!");
-  }
-  window.addEventListener('load', sayHello);
+
+
+
+
+
+  
+
+
+
+
+
+
 
 
 
