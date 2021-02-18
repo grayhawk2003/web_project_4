@@ -1,4 +1,4 @@
-.profile__explorer {
+.profile__ocupation {
     font-size: 18px;
     line-height: 22px;
     font-weight: normal;
@@ -6,9 +6,16 @@
     margin-top: 16px;
 }
 
+@media screen and (max-width: 1130px) {
+    .profile__occupation {
+        margin-bottom: 36px;
+    }
+}
+
 @media screen and (max-width: 450px) {
-    .profile__explorer {
+    .profile__ocupation {
         font-size: 14px;
         line-height: 16.94px;
+        margin-top: 14px;
     }
 }

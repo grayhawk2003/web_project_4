@@ -1,10 +1,15 @@
-let button = document.querySelector('.profile__edit-button');
+let editButton = document.querySelector('.profile__edit-button');
 let modal = document.querySelector('.modal');
 let overlay = document.querySelector('.overlay');
 let closeButton = document.querySelector('.modal__close-button');
-let submit = document.querySelector('.modal__form-submit');
+let submitButton = document.querySelector('.modal__form-submit');
+let profileName = document.querySelector('.profile__title');
+let profileOccupation = document.querySelector('.profile__occupation');
+let formName = document.querySelector('.modal__form-name');
+let formOccupation = document.querySelector('.modal__form-occupation');
+    
 
-button.addEventListener('click', function() {
+editButton.addEventListener('click', function() {
     modal.style.display = 'block';
     overlay.style.display = 'block';
     closeButton.style.display = 'block';
@@ -16,50 +21,52 @@ closeButton.addEventListener('click', function() {
     overlay.style.display = 'none'
 });
 
-submit.addEventListener('click', function() {
+/*function formInputName() 
+profileName.textContent = formName.value;
+profileOccupation.textContent = formOccupation.value;*/
+
+
+submitButton.addEventListener('input', function(evt) {
+    evt.preventDefault();
     modal.style.display = 'none';
     overlay.style.display = 'none';
     closeButton.style.display = 'none';
+    profileName.textContent = formName.value;
+    profileOccupation.textContent = formOccupation.value;
+
+});
+
+/*
+function sayHello() {  /* function outside the event listener?*/
+    /*console.log("Hello Console!");
+  }
+  window.addEventListener('load', sayHello);
+
+
+
+
+
+
+
+
+
+
+
     
-})
-
-/*let form = document.querySelector('.modal__form');*/
-
-
-
-
-
-function formInputName() {
-    let formName = document.querySelector('.modal__form-name');
-    let formOccupation = document.querySelector('modal__form-occupation');
-    let profileName = document.querySelector('.profile__title');
-    let profileOccupation = document.querySelector('.profile__occupation');
     
-    profileName.innerHTML = formName.nodeValue;
-    profileOccupation.innerHTML = formOccupation.nodeValue;
-
-}
-
-
-
-submit.addEventListener('click', function() {
-    profileName.innerHTML = formName.nodeValue;
-    profileOccupation.innerHTML = formOccupation.nodeValue;
-    
-})
 
 
 
 
-/*function formInputName() {
-    let profileName = document.querySelector('.profile__title');
-    let profileOccupation = document.querySelector('.profile__occupation');
 
-}
+
+
+
+
 
 
 /*function handleFormSubmit (evt) {
-    evt.preventDefault();
+    
     
 } )   
 
