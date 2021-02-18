@@ -1,16 +1,23 @@
 # Project 4: Around The U.S.
 
 ### Overview
+* Most recent updates were made to project to complete the functionality of the modal through javascript. 
 
-* Figma
-* Images
+**Description**
 
-**Figma**
+This is a project about world travel and adventure.  It highlights 6 specific areas around to world through the eyes of different explorers.  The website is responsive and functional through use of a pop-up box, and it was made using the BEM methodology, coded with primarily HTML, CSS and javascript.  
 
-* [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+**Github**
 
-**Images**
+* [Link to the project on Github] https://grayhawk2003.github.io/web_project_4/
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
+**Summary**
 
-Have fun with JavaScript!
+Throughout this project, I have honed my skills with responsive CSS design, gridbox, and flexbox.  This was my first experience using javascript, and thouhg it was challenging, with time and hard work I improved my hard skills with this new language.
+
+
+
+
+
+
+
