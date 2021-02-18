@@ -15,13 +15,9 @@ This is a project about world travel and adventure.  It highlights 6 specific ar
 
 Throughout this project, I have honed my skills with responsive CSS design, gridbox, and flexbox.  This was my first experience using javascript, and thouhg it was challenging, with time and hard work I improved my hard skills with this new language.
 
-### Overview
 
-* Figma
-* Images
 
-**Figma**
 
-* [Link to the Figma] https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4%3A-Around-The-U.S.-%7C-desktop-%2B-mobile?node-id=1%3A203
+
 
 
