@@ -7,7 +7,8 @@
 @import url(../profile/__edit-button/profile__edit-button.css);
 @import url(../profile/__info-top/profile__info-top.css);
 @import url(../profile/__add-button-plus/profile__add-button-plus.css);
-@import url(../profile/__edit-button-vector/profile__edit-button-vector.css);
+@import url(../profile/__edit-button-image/profile__edit-button-image.css);
+
 
 .profile {
     width: calc(100% - 400px);

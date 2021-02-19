@@ -9,6 +9,8 @@
     display: block;
     z-index: 1;
     border: none;
+    cursor: pointer;
+    
 }
 
 @media screen and (max-width: 550px) {

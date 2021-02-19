@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
     <title>Around the US</title>
   </head>
   <body class="page">
@@ -21,11 +19,11 @@
         <div class="profile__info">
           <div class="profile__info-top">
             <h1 class="profile__title">Jacques Cousteau</h1>
-            <button class="profile__edit-button" type="button"><img src="images/edit-button-vector.png" class="profile__edit-button-vector" alt="edit button vector"></button>
+            <button class="profile__edit-button button" type="button"><img src="images/edit-button.png" class="profile__edit-button-image" alt="edit button vector"></button>
           </div>
-          <h3 class="profile__occupation">Explorer</h3>
+          <h2 class="profile__occupation">Explorer</h2>
         </div>
-        <button class="profile__add-button" type="button"><img src="images/add-button-plus.png" class="profile__add-button-plus" alt="add button"></button>  
+        <button class="profile__add-button button" type="button" disabled><img src="images/add-button-plus.png" class="profile__add-button-plus" alt="add button"></button>  
       </section>
       <section class="elements">
         <div class="element">
@@ -35,7 +33,7 @@
           <div class="element__bottom">
             <div class="element__content">
               <h2 class="element__title">Yosemite Valley</h2>
-              <img src="images/heart.png" alt="heart" class="element__heart">
+              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
             </div>
           </div>
         </div>
@@ -46,7 +44,7 @@
           <div class="element__bottom">
             <div class="element__content">
               <h2 class="element__title">Lake Louise</h2>
-              <img src="images/heart.png" alt="heart" class="element__heart">
+              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
             </div>
           </div>
         </div>
@@ -57,7 +55,7 @@
           <div class="element__bottom">
             <div class="element__content">
               <h2 class="element__title">Bald Mountain</h2>
-              <img src="images/heart.png" alt="heart" class="element__heart">
+              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
             </div>
           </div>
         </div>
@@ -68,7 +66,7 @@
           <div class="element__bottom">
             <div class="element__content">
               <h2 class="element__title">Latemar</h2>
-              <img src="images/heart.png" alt="heart" class="element__heart">
+              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
             </div>
           </div>
         </div>
@@ -78,8 +76,8 @@
           </div>
           <div class="element__bottom">
             <div class="element__content">
-              <h2 class="element__title">Vanoise Nationa</h2>
-              <img src="images/heart.png" alt="heart" class="element__heart">
+              <h2 class="element__title">Vanoise National Park</h2>
+              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
             </div>
           </div>
         </div>
@@ -90,7 +88,7 @@
           <div class="element__bottom">
             <div class="element__content">
               <h2 class="element__title"> Lago di Braies</h2>
-              <img src="images/heart.png" alt="heart" class="element__heart">
+              <button class="element__like button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
             </div>
           </div>
         </div>
@@ -99,7 +97,7 @@
       
       <div class="modal">
         <div class="modal__container">
-          <button aria-label="Close Form" type="button" class="modal__close-button">
+          <button aria-label="Close Form" type="button" class="modal__close-button link">
              <span><img src="images/modal-close-icon.png" alt="X" class="modal__close-icon"></span>
           </button>
           <form class="modal__form" action="#" method="POST">
@@ -107,7 +105,7 @@
             <input type="text" id="name" name="name" class="modal__form-control modal__form-name" required placeholder="Jacques Cousteau">         
             <input type="text" id="occupation" name="occupation" class="modal__form-control modal__form-occupation" required placeholder="Explorer">    
              
-           <button aria-label="Submit Form" type="submit" class="modal__form-submit">Save</button>  
+           <button aria-label="Submit Form" type="submit" class="modal__form-submit button">Save</button>  
           </form>
         </div>
       </div>  
