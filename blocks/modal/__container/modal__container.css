@@ -1,13 +1,19 @@
 .modal__container {
     display: flex;
+    
     flex-direction: column;
     margin: auto;  
     z-index: 1000;  
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    align-items: center;
     height: 100vh;
+
+
+    /*height: 330px;
+    width: 430px;
+    left: calc(50% - 105px);
+    top: */
 
 
     /*added from the .modal*/

@@ -1,13 +1,13 @@
 .modal__close-button {
-    background: black;
+    background:rgba(0,0,0,0);
     height: 40px;
     width: 40px;
     padding: 0;
     position: absolute;
-    top: 20vh;
-    right: 60vh;
-    /*display: block;*/
-    z-index: 4;
+    top: 240px;
+    /*right: 335px;*/
+    margin-left: calc(50% - 215px);
+    z-index: 100;
     border: none;
     cursor: pointer;
     
@@ -17,6 +17,8 @@
     .modal__close-button {
         width: 26px;
         height: 26px;
+        right: 0;
+        top: -30px;
      
     }
 }
