@@ -95,10 +95,10 @@
       </section>
 
       
-      <div class="modal">
-        <div class="modal__container">
+      <div class="modal"> <!--this is where we style the overlay-->
+        <div class="modal__container"> <!--set to display flex with children: popup and close button-->
           <button aria-label="Close Form" type="button" class="modal__close-button link">
-             <span><img src="images/modal-close-icon.png" alt="X" class="modal__close-icon"></span>
+             <img src="images/modal-close-icon.png" alt="X" class="modal__close-icon">
           </button>
           <form class="modal__form" action="#" method="POST">
             <h2 class="modal__title">Edit profile</h2>
@@ -109,7 +109,7 @@
           </form>
         </div>
       </div>  
-      <div class="overlay"></div>
+      <!--<div class="overlay"></div>   Trying to do away with separate div for overlay-->
 
     </main>
     <script src="./scripts/index.js"></script>

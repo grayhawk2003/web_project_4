@@ -3,11 +3,11 @@
     height: 40px;
     width: 40px;
     padding: 0;
-    position: fixed;
-    margin-top: -40px;
-    margin-left: 430px;
-    display: block;
-    z-index: 1;
+    position: absolute;
+    top: 20vh;
+    right: 60vh;
+    /*display: block;*/
+    z-index: 4;
     border: none;
     cursor: pointer;
     
@@ -17,7 +17,6 @@
     .modal__close-button {
         width: 26px;
         height: 26px;
-        margin-top: 53.62;
-        margin-left: auto;
+     
     }
 }

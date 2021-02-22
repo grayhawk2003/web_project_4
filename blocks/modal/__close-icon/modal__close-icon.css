@@ -1,11 +1,6 @@
 .modal__close-icon {
-    object-fit: contain;
-    vertical-align: center;
-    position: fixed;
     height: 40px;
     width: 40px;
-  
-
 }
 
 @media screen and (max-width: 550px) {

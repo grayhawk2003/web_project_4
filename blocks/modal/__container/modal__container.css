@@ -1,4 +1,27 @@
 .modal__container {
     display: flex;
     flex-direction: column;
+    margin: auto;  
+    z-index: 3;  
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    height: 100vh;
+
+
+    /*added from the .modal*/
+    /*height: 330px;
+    width: 430px;
+    border-radius: 10px;*/
+    /*display: none;*/
+    /*background-color: white;
+    border: none;*/
+    /*margin: 0;*/
+    /*position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+
+  
 }

@@ -1,9 +1,14 @@
 .modal__form { 
     height: 330px;
-    width: 430px;
-    /*margin: 34px 36px 36.51px;  */
+    width: 430px; 
+    border-radius: 10px;
+    margin: auto;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    background-color: white;
+    border: none;
+    z-index: 4;
   
 }
 

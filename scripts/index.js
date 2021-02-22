@@ -1,6 +1,6 @@
 let editButton = document.querySelector('.profile__edit-button');
 let modal = document.querySelector('.modal');
-let overlay = document.querySelector('.overlay');
+/*let overlay = document.querySelector('.overlay');*/
 let closeButton = document.querySelector('.modal__close-button');
 let submitButton = document.querySelector('.modal__form-submit');
 let profileName = document.querySelector('.profile__title');
@@ -12,7 +12,7 @@ let formOccupation = document.querySelector('.modal__form-occupation');
 editButton.addEventListener('click', function(evt) {
     evt.preventDefault();
     modal.style.display = 'block';
-    overlay.style.display = 'block';
+    /*overlay.style.display = 'block';*/
     closeButton.style.display = 'block';
     
 });
@@ -20,12 +20,12 @@ editButton.addEventListener('click', function(evt) {
 closeButton.addEventListener('click', function() {
     modal.style.display = 'none';
     closeButton.style.display = 'none';
-    overlay.style.display = 'none'
+    /*overlay.style.display = 'none'*/
 });
 
 function closeModal () {
     modal.style.display = 'none';
-    overlay.style.display = 'none';
+    /*overlay.style.display = 'none';*/
     closeButton.style.display = 'none';
 }
 
