@@ -7,6 +7,7 @@ let profileName = document.querySelector('.profile__title');
 let profileOccupation = document.querySelector('.profile__occupation');
 let formName = document.querySelector('.modal__form-name');
 let formOccupation = document.querySelector('.modal__form-occupation');
+
     
 
 editButton.addEventListener('click', function(evt) {
@@ -14,6 +15,7 @@ editButton.addEventListener('click', function(evt) {
     modal.style.display = 'block';
     /*overlay.style.display = 'block';*/
     closeButton.style.display = 'block';
+    
     
 });
 
