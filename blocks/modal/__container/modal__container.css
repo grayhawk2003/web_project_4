@@ -1,9 +1,8 @@
 .modal__container {
     display: flex;
-    
     flex-direction: column;
-    margin: auto;  
-    z-index: 1000;  
+    margin: auto;
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
