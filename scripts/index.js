@@ -16,6 +16,8 @@ function closeModal () {
 editButton.addEventListener('click', function(evt) {
     evt.preventDefault(); /*Kevin had me add this*/
     modal.style.display = 'block';
+    formName.textContent = profileName.value;
+    formOccupation.textContent = profileOccupation.value;
     /*closeButton.style.display = 'block'; */ 
 });
 
