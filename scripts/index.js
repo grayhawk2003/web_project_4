@@ -6,6 +6,7 @@ let profileName = document.querySelector('.profile__title');
 let profileOccupation = document.querySelector('.profile__occupation');
 let formName = document.querySelector('.modal__form-name');
 let formOccupation = document.querySelector('.modal__form-occupation');
+let form = document.querySelector('.modal__form');
 
 function closeModal () {
     modal.style.display = 'none';
@@ -15,20 +16,22 @@ function closeModal () {
 editButton.addEventListener('click', function(evt) {
     evt.preventDefault(); /*Kevin had me add this*/
     modal.style.display = 'block';
-    closeButton.style.display = 'block';  
+    /*closeButton.style.display = 'block'; */ 
 });
 
 closeButton.addEventListener('click', function() {
     modal.style.display = 'none';
-    closeButton.style.display = 'none';
+    /*closeButton.style.display = 'none';*/
 });
 
 submitButton.addEventListener('click', function(evt) {
     evt.preventDefault(); /*Kevin had me add this*/
-    closeModal ();
     profileName.textContent = formName.value;
     profileOccupation.textContent = formOccupation.value;
+    closeModal ();
 });    
+
+form.addEventListener('submit', )
 
 
 
