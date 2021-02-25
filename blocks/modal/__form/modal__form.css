@@ -2,12 +2,8 @@
     height: 330px;
     width: 430px;
     border-radius: 10px;
-    /*margin: auto;*/
-    /*left: calc(50% - 215px);
-    top: calc(50% - 165px);*/
     position: relative;
     display: flex;
-    align-items: center;
     flex-direction: column;
     background-color: white;
     border: none;

@@ -1,12 +1,11 @@
-@import url(../modal/__form-control/modal__form-control.css);
-@import url(../modal/__form-submit/modal__form-submit.css);
-@import url(../modal/__title/modal__title.css);
+@import url(./__form-control/modal__form-control.css);
+@import url(./__form-submit/modal__form-submit.css);
+@import url(./__title/modal__title.css);
 @import url(../modal/__form/modal__form.css);
-@import url(../modal/__close-icon/modal__close-icon.css);
-@import url(../modal/__container/modal__container.css);
-@import url(../modal/__close-button/modal__close-button.css);
-@import url(../modal/__form-name/modal__form-name.css);
-@import url(../modal/__form-occupation/modal__form-occupation.css);
+@import url(./__close-icon/modal__close-icon.css);
+@import url(./__container/modal__container.css);
+@import url(./__close-button/modal__close-button.css);
+@import url(./__open/modal__open.css);
 
 
 .modal {

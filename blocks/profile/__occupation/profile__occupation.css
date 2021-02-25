@@ -1,9 +1,13 @@
-.profile__ocupation {
+.profile__occupation {
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     line-height: 22px;
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     margin-top: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1130px) {
@@ -12,8 +16,8 @@
     }
 }
 
-@media screen and (max-width: 450px) {
-    .profile__ocupation {
+@media screen and (max-width: 550px) {
+    .profile__occupation {
         font-size: 14px;
         line-height: 16.94px;
         margin-top: 14px;

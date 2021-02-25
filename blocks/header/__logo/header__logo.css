@@ -5,15 +5,12 @@
     margin-bottom: 41px;
 }
 
-/*@media screen and (max-width: 768px) {
-    .header__logo {
-      margin-left: 
-    }
-}*/
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
     .header__logo {
+      height: 24px;
+      width: 126px;
       margin-left: 27px;
       
     }

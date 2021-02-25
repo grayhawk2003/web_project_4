@@ -1,13 +1,15 @@
 .modal__close-button {
+    /*background-image: url(../../../images/modal-close-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: fill;*/
     background:rgba(0,0,0,0);
-    height: 40px;
-    width: 40px;
+    height: 55px;
+    width: 55px;
     padding: 0;
     position: absolute;
-    top: -40px;
-    right: -40px;
-    /*right: 335px;*/
-    /*margin-left: calc(50% - 215px);*/
+    top: -50px;
+    right: -50px;
     z-index: 100;
     border: none;
     cursor: pointer;
@@ -16,10 +18,10 @@
 
 @media screen and (max-width: 550px) {
     .modal__close-button {
-        width: 26px;
-        height: 26px;
+        width: 36px;
+        height: 36px;
         right: 0;
-        top: -26px;
+        top: -36px;
      
     }
 }

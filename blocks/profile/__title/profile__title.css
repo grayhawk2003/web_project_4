@@ -5,7 +5,10 @@
     font-weight: 500;
     font-style: normal;
     margin-bottom: 0;
-    align-items: baseline;  
+    align-items: baseline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
