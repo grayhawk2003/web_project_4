@@ -1,6 +1,5 @@
 .button {
-    transition: opacity linear .3s;
-    
+    transition: opacity linear .3s;   
   }
   
   .button:hover {

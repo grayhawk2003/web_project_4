@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     color: white;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
