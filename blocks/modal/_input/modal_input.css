@@ -1,4 +1,4 @@
-.modal__form_input {
+.modal_input {
     width: 358px;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 14px;
@@ -16,7 +16,7 @@
 
 
 @media screen and (max-width: 550px) {
-    .modal__form_input {
+    .modal_input {
         width: 238px;
         margin: 29px 22px 0;
         

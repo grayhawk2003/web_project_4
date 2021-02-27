@@ -1,4 +1,4 @@
-.modal__form_submit {
+.modal_submit {
     background-color: black;
     color: white;
     cursor: pointer;
@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: 550px) {
-    .modal__form_submit {
+    .modal_submit {
         width: 238px;
         margin: 45px 22px 25px;
         font-size: 14px;
