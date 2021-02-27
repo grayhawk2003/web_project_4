@@ -2,16 +2,16 @@
     font-family: 'Inter', Arial, sans-serif;
     font-size: 24px;
     font-weight: 900;
-    line-height: 29.05px;
+    line-height: 29px;
     font-style: normal;
     text-align: left;
-    margin: 34px 36px 54px;  
+    margin: 34px 36px 22px;  
 }
 
 @media screen and (max-width: 550px) {
     .modal__title {
         width: 238px;
-        margin: 25px 22px 75px;
+        margin: 25px 22px 45px;
         font-size: 18px;
         line-height: 21.78px;
     }

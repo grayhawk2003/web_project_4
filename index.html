@@ -8,111 +8,80 @@
   </head>
   <body class="page">
     <header class="header">
-      <img src="images/around-logo.svg" alt="around logo" class="header__logo">
-      <img src="images/header-line.png" alt="header-line" class="header__line">    
+      <img src="images/around-logo.svg" alt="around logo" class="header__logo">    
     </header>
     <main class="content">
       <section class="profile">
-        <div class="profile__avatar">
-          <img src="images/jacques.jpg" alt="jacques cousteau image" class="profile__picture">
-        </div>
+        <img src="images/jacques.jpg" alt="jacques cousteau image" class="profile__picture">
         <div class="profile__info">
           <div class="profile__info-top">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button class="profile__edit-button button" type="button"><img src="images/edit-button.png" class="profile__edit-button-image" alt="edit button vector"></button>
           </div>
-          <h2 class="profile__occupation">Explorer</h2>
+          <p class="profile__occupation">Explorer</p>
         </div>
-        <button class="profile__add-button button" type="button" disabled><img src="images/add-button-plus.png" class="profile__add-button-plus" alt="add button"></button>  
+        <button class="profile__add-button button" type="button"><img src="images/add-button-plus.png" class="profile__add-button-plus" alt="add button"></button>  
       </section>
       <section class="elements">
         <div class="element">
-          <div class="element__image-container"> 
-            <img src="images/yosemite.png" alt="yosemite valley" class="element__image">
-          </div>
-          <div class="element__bottom">
+          <img src="images/yosemite.png" alt="yosemite valley" class="element__image">                   
             <div class="element__content">
               <h2 class="element__title">Yosemite Valley</h2>
-              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
-            </div>
-          </div>
+              <button class="element__like button" type="button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
+            </div>         
         </div>
         <div class="element">
-          <div class="element__image-container">
-            <img src="images/louise.png" alt="lake louise" class="element__image">
-          </div>
-          <div class="element__bottom">
+          <img src="images/louise.png" alt="lake louise" class="element__image">         
             <div class="element__content">
               <h2 class="element__title">Lake Louise</h2>
-              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
-            </div>
-          </div>
+              <button class="element__like button" type="button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
+            </div>        
         </div>
         <div class="element">
-          <div class="element__image-container">
-            <img src="images/bald.png" alt="bald mountain" class="element__image">
-          </div>
-          <div class="element__bottom">
+          <img src="images/bald.png" alt="bald mountain" class="element__image">       
             <div class="element__content">
               <h2 class="element__title">Bald Mountain</h2>
-              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
-            </div>
-          </div>
+              <button class="element__like button" type="button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
+            </div>        
         </div>
         <div class="element">
-          <div class="element__image-container">
-            <img src="images/latemar.png" alt="latemar" class="element__image">
-          </div>
-          <div class="element__bottom">
+          <img src="images/latemar.png" alt="latemar" class="element__image">      
             <div class="element__content">
               <h2 class="element__title">Latemar</h2>
-              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
-            </div>
-          </div>
+              <button class="element__like button" type="button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
+            </div>          
         </div>
         <div class="element">
-          <div class="element__image-container">
-            <img src="images/vanoise.png" alt="vanoise national park" class="element__image">
-          </div>
-          <div class="element__bottom">
+          <img src="images/vanoise.png" alt="vanoise national park" class="element__image">        
             <div class="element__content">
               <h2 class="element__title">Vanoise National Park</h2>
-              <button class="element__like button" type="button" disabled><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
-            </div>
-          </div>
+              <button class="element__like button" type="button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
+            </div>          
         </div>
         <div class="element">
-          <div class="element__image-container">
-            <img src="images/lago.png" alt="lago di briaes" class="element__image">
-          </div>
-          <div class="element__bottom">
+          <img src="images/lago.png" alt="lago di briaes" class="element__image">
             <div class="element__content">
               <h2 class="element__title"> Lago di Braies</h2>
-              <button class="element__like button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
-            </div>
-          </div>
+              <button class="element__like button" type="button"><img src="images/heart.png" class="element__like-heart" alt="heart"></button> 
+            </div>          
         </div>
       </section>
-
-      
-      <div class="modal"> 
-        <div class="modal__container">   
-          <form class="modal__form" action="#" method="POST">
-            <button aria-label="Close Form" type="button" class="modal__close-button">
-              <img src="images/modal-close-icon.png" alt="X" class="modal__close-icon link">
-            </button>
-            <h2 class="modal__title">Edit profile</h2>
-            <input type="text" id="name" name="name" class="modal__form-control modal__form-name">         
-            <input type="text" id="occupation" name="occupation" class="modal__form-control modal__form-occupation">                 
-           <button aria-label="Submit Form" type="submit" class="modal__form-submit button">Save</button>  
-          </form>
-        </div>
-      </div>  
-      
-
-    </main>
-    <script src="./scripts/index.js"></script>
-  </body>
-  <footer class="footer"><p class="footer__copyright">&copy;2020. Around the US</p></footer>
+    </main>    
+    <footer class="footer"><p class="footer__copyright">&copy;2020. Around the US</p></footer>
+    <div class="modal"> 
+      <div class="modal__container">   
+        <form class="modal__form" action="#" method="POST">
+          <button aria-label="Close Form" type="button" class="modal__close-button button">
+            <img src="images/modal-close-icon.png" alt="X" class="modal__close-icon">
+          </button>
+          <h3 class="modal__title">Edit profile</h3>
+          <input type="text" name="name" class="modal__form_control modal__form-name" placeholder="Name">         
+          <input type="text" name="occupation" class="modal__form_control modal__form-occupation" placeholder="About me">                 
+          <button aria-label="Submit Form" type="submit" class="modal__form_submit button">Save</button>  
+        </form>
+      </div>
+    </div>   
+    <script src="./scripts/index.js"></script>  
+  </body> 
 
 </html>

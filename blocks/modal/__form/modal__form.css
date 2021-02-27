@@ -1,3 +1,6 @@
+@import url(./__form_control/modal__form_control.css);
+@import url(./__form_submit/modal__form_submit.css);
+
 .modal__form { 
     height: 330px;
     width: 430px;
@@ -8,6 +11,7 @@
     background-color: white;
     border: none;
     z-index: 4;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 550px) {
