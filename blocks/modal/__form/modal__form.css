@@ -1,5 +1,6 @@
-@import url(./__form_control/modal__form_control.css);
-@import url(./__form_submit/modal__form_submit.css);
+
+@import url(./_input/modal__form_input.css);
+@import url(./_submit/modal__form_submit.css);
 
 .modal__form { 
     height: 330px;
