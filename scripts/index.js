@@ -11,15 +11,14 @@ function closeModal () {
     modal.classList.remove('modal_open');   
 }
 
-editButton.addEventListener('click', function(evt) {
-    modal.classList.add('modal_open');
+editButton.addEventListener('click', function() {
     formName.value = profileName.textContent;
     formOccupation.value = profileOccupation.textContent;
-    
+    modal.classList.add('modal_open');
 });
 
 closeButton.addEventListener('click', function() {
-    modal.classList.remove('modal_open');
+    closeModal();
 });
 
 editModalForm.addEventListener('submit', function(evt) {
