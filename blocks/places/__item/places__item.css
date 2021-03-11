@@ -1,0 +1,13 @@
+.places__item {
+    max-width: 282px;
+    background-color: white;
+    width: 282px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+
