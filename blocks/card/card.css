@@ -3,6 +3,8 @@
 @import url(./__content/card__content.css);
 @import url(./__title/card__title.css);
 @import url(./__like-heart/card__like-heart.css);
+@import url(./__trash-button/card__trash-button.css);
+@import url(./__trash-image/card__trash-image.css);
 
 .card {
     max-width: 282px;

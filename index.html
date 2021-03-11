@@ -70,10 +70,11 @@
       </section>
     </main>    
     <footer class="footer"><p class="footer__copyright">&copy;2020. Around the US</p></footer>
-    <div class="modal"> 
+
+    <div class="modal modal_type_profile"> 
       <div class="modal__container">   
-        <form class="modal__form" action="#" method="POST">
-          <button aria-label="Close Form" type="button" class="modal__close-button button">
+        <form class="modal__form modal__form_type_profile" action="#" method="POST">
+          <button aria-label="Close Form" type="button" class="modal__close-button modal_close_profile button">
             <img src="images/modal-close-icon.png" alt="X" class="modal__close-icon">
           </button>
           <h3 class="modal__title">Edit profile</h3>
@@ -82,11 +83,28 @@
           <button aria-label="Submit Form" type="submit" class="modal__submit button">Save</button>  
         </form>
       </div>
-    </div>   
+    </div>  
+    
+    <div class="modal modal_type_add-card"> 
+      <div class="modal__container">   
+        <form class="modal__form modal__form_type_add-card" action="#" method="POST">
+          <button aria-label="Close Form" type="button" class="modal__close-button modal_close_add-card button">
+            <img src="images/modal-close-icon.png" alt="X" class="modal__close-icon">
+          </button>
+          <h3 class="modal__title">New Place</h3>
+          <input type="text" name="title" class="modal__input modal__input_type_title" placeholder="Title">         
+          <input type="url" name="image url" class="modal__input modal__input_type_image-url" placeholder="Image URL">                 
+          <button aria-label="Submit Form" type="submit" class="modal__submit button">Create</button>  
+        </form>
+      </div>
+    </div>  
 
     <template id="card-template">
-      <div class="places__item">
-        <img src="" alt="place image" class="card__image">                      
+      <div class="places__item card">
+        <img src="#" alt="place image" class="card__image">   
+        <button type="button" class="card__trash-button button">
+          <img src="images/trash.png" alt="trash can" class="card__trash-image">
+        </button>                   
         <div class="card__content">
           <h2 class="card__title"></h2>
           <button class="card__like-button button" type="button">
