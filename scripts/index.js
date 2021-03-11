@@ -78,7 +78,7 @@ profileModalForm.addEventListener('submit', function(evt) {
 
 initialCards.forEach(card => {
     //get reference to template elements we want to use//
-    const cardTemplate = document.querySelector('#card-template').content.querySelector('.place');
+    const cardTemplate = document.querySelector('#card-template').content.querySelector('.places__item');
     const cardElement = cardTemplate.cloneNode(true);
 
     const cardImage = cardElement.querySelector('.card__image');
