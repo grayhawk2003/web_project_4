@@ -40,11 +40,11 @@ let profileEditButton = document.querySelector('.profile__edit-button');
 let profileModalCloseButton = document.querySelector('.modal__close-button');
 let profileName = document.querySelector('.profile__title');
 let profileOccupation = document.querySelector('.profile__occupation');
-let card = document.querySelector('.card');
+
 
 //Wrappers//
 
-const placesList = document.querySelector('.places__list');
+const placesList = document.querySelector('.places');
 
 
 ///////////////
@@ -84,7 +84,7 @@ initialCards.forEach(card => {
     const cardImage = cardElement.querySelector('.card__image');
     const cardTitle = cardElement.querySelector('.card__title');
 
-    cardImage.src = `url(${card.link})`;  //use template literal for the url srd//
+    cardImage.src = card.link;  
     cardTitle.textContent = card.name;
 
     placesList.append(cardElement);
