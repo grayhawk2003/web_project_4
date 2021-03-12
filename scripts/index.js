@@ -29,35 +29,48 @@ const initialCards = [
     }
   ]; 
  
-///Modals////
+/////////////  
+///MODALS////
+/////////////
 let addCardModal = document.querySelector('.modal_type_add-card');
 let addCardModalForm = document.querySelector('.modal__form_type_add-card');
+
+let previewModal = document.querySelector('.modal_type_preview');
 
 let profileModal = document.querySelector('.modal_type_profile');
 let profileModalForm = document.querySelector('.modal__form_type_profile');
 let profileModalFormName = document.querySelector('.modal__input_type_name');
 let profileModalFormOccupation = document.querySelector('.modal__input_type_occupation');
 
-//Buttons and other DOM elements//
+//////////////////////////////////
+//BUTTONS and OTHER DOM ELEMENTS//
+//////////////////////////////////
+
+////Add Card Modal//
 let addCardModalCloseButton = document.querySelector('.modal_close_add-card');
 let addCardButton = document.querySelector('.profile__add-button');
 let addCardTitle = document.querySelector('.modal__input_type_title');
 let addCardUrl = document.querySelector('.modal__input_type_image-url');
+////Profile Modal///
 let profileEditButton = document.querySelector('.profile__edit-button');
 let profileModalCloseButton = document.querySelector('.modal_close_profile');
 let profileName = document.querySelector('.profile__title');
 let profileOccupation = document.querySelector('.profile__occupation');
+///Preview Modal///
+let previewModalCloseButton = document.querySelector('.modal_close_preview');
 
 
 
 //Wrappers//
-
 const placesList = document.querySelector('.places');
 
 
 ///////////////
 ///FUNCTIONS///
+///////////////
 
+
+///Create clone of card////
 function createCardElement (card) {
   //get reference to template elements we want to use//
   const cardTemplate = document.querySelector('#card-template').content.querySelector('.places__item');
@@ -66,22 +79,23 @@ function createCardElement (card) {
   const cardImage = cardElement.querySelector('.card__image');
   const cardTitle = cardElement.querySelector('.card__title');
   const cardLikeButton = cardElement.querySelector('.card__like-button');
-  const deleteCardButton = cardElement.querySelector('.card__trash-button');
+  const cardDeleteButton = cardElement.querySelector('.card__trash-button');
 
-  cardImage.src = card.link;  
+  cardImage.src = card.link; 
   cardTitle.textContent = card.name;
 
-  cardImage.addEventListener('click', () => {
-      //handle image click//
-  });
-
-  cardLikeButton.addEventListener('click', () => {
+  cardImage.addEventListener('click', () => onImagePreview (card));
+  //handle image click//
+ 
+  cardLikeButton.addEventListener('click', () => onLikeButtonClick (card));
       //handle like button click//
-  });
+
+  cardDeleteButton.addEventListener('click', () => onTrashButtonClick (card));    
 
   return cardElement;
 }
 
+///Render Card///
 function renderCard (card, wrapper) {
     const cardElement = createCardElement(card);
     wrapper.append(cardElement);
@@ -89,11 +103,23 @@ function renderCard (card, wrapper) {
     //or Rafael said you can shorten by combining the two:  wrapper.append(cardElement(card));
 }
 
-//replace profileWindow with modalWindow so that we can reuse the funtion for other popups///
+///Toggle ANY Modal Window////
 function toggleModal(modalWindow) {  
     modalWindow.classList.toggle('modal_open');   
 }
 
+////Remove Card///
+///need to come back to this as it's not functining////
+const onTrashButtonClick = card => {
+    placesList.removeChild(card);
+}
+
+////Open Image Preview Modal///
+const onImagePreview = card => {
+    const modalImage = previewModal.querySelector('.modal__image');
+    modalImage.src = card.link;
+    toggleModal(previewModal);
+}
 
 
 //////////////
@@ -102,26 +128,19 @@ function toggleModal(modalWindow) {
 
 addCardButton.addEventListener('click', () => toggleModal(addCardModal));
 
-/*addCardModalCloseButton.addEventListener('click', function() {
-    toggleModal(addCardModal);
-});*/
-///////THE ABOVE CODE BECAME THE FUNCTION BELOW/////
 addCardModalCloseButton.addEventListener('click', () => toggleModal(addCardModal));
 
 
 profileEditButton.addEventListener('click', function() {
     profileModalFormName.value = profileName.textContent;
     profileModalFormOccupation.value = profileOccupation.textContent;
-    /*profileModal.classList.toggle('modal_open');*/  //had this code for project 4, 
-    //but need to use function that applies to ANY modal, so used below line of code///
     toggleModal(profileModal);
 });
 
-/*profileModalCloseButton.addEventListener('click', function() {
-    toggleModal(profileModal);
-});*/
-///////THE ABOVE CODE BECAME THE FUNCTION BELOW/////
+
 profileModalCloseButton.addEventListener('click', () => toggleModal(profileModal));
+
+previewModalCloseButton.addEventListener('click', () => toggleModal(previewModal));
 
 
 profileModalForm.addEventListener('submit', function(evt) {
