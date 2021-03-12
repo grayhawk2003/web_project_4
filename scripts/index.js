@@ -33,7 +33,7 @@ const initialCards = [
 ///MODALS////
 /////////////
 let addCardModal = document.querySelector('.modal_type_add-card');
-let addCardModalForm = document.querySelector('.modal__form_type_add-card');
+let addCardModalForm = document.querySelector('.modal__form_type_add-card'); 
 
 let previewModal = document.querySelector('.modal_type_preview');
 
@@ -90,7 +90,8 @@ function createCardElement (card) {
   cardLikeButton.addEventListener('click', () => onLikeButtonClick (card));
       //handle like button click//
 
-  cardDeleteButton.addEventListener('click', () => onTrashButtonClick (card));    
+  cardDeleteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
+  
 
   return cardElement;
 }
@@ -103,13 +104,22 @@ function renderCard (card, wrapper) {
     //or Rafael said you can shorten by combining the two:  wrapper.append(cardElement(card));
 }
 
+//Creating new card///
+function createNewCard () {
+    const newCard = cardTemplate.cloneNode(true);
+    const newCardImage = newCard.querySelector('.card__image');
+    const newCardTitle = newCard.querySelector('.card__title');
+    newCardImage.src = card.link; 
+    newCardTitle.textContent = card.name;
+    return newCard;
+}
+
 ///Toggle ANY Modal Window////
 function toggleModal(modalWindow) {  
     modalWindow.classList.toggle('modal_open');   
 }
 
 ////Remove Card///
-///need to come back to this as it's not functining////
 const onTrashButtonClick = card => {
     placesList.removeChild(card);
 }
@@ -150,16 +160,23 @@ profileModalForm.addEventListener('submit', function(evt) {
     toggleModal(profileModal);
 });   
 
-
 //ADDING NEW CARD BY FILLING IN FORM///
-addCardModalForm.addEventListener('sumbmit', function(evt) {
-    evt.preventDefault();
-    //add card//
-    //change name on card//
-    cardTitle.textContent = addCardTitle.value;
-    //change picture on card//
+addCardModalForm.addEventListener('submit', function(evt) {
+    evt.preventDefault(); 
+    createNewCard();
+    newCardTitle.textContent = addCardTitle.value;
+    newCardImage.src = addCardUrl.value;
+    placesList.prepend(newCard);
     toggleModal(addCardModal);
-});
+});   
+
+
+/*addCardModalForm.addEventListener('sumbmit', createNewCard(card) {   
+    cardTitle.textContent = addCardTitle.value;
+    cardImage.src = addCardUrl.value;   
+    placesList.prepend(newCard);
+    toggleModal(addCardModal);
+});*/
 
  
 
