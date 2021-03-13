@@ -1,6 +1,6 @@
-.card__like-heart {
+/*.card__like-heart_active {
     background-color: #FFFFFF;
-    display: block;
     width: 21px;
     height: 19px;
+    display: none;
 }

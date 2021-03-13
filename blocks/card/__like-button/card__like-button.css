@@ -1,9 +1,7 @@
 .card__like-button {
     width: 21px;
     height: 19px;
-    object-fit: contain;
     border: none;
     padding: 0;
-    cursor: pointer;
-   
+    cursor: pointer; 
 }
