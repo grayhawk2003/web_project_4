@@ -60,6 +60,7 @@ let profileOccupation = document.querySelector('.profile__occupation');
 ///Preview Modal///
 let previewModalCloseButton = document.querySelector('.modal_close_preview');
 ///Like Button Heart Image///
+let likeButtonImage = document.querySelector('.card__like-image');
 let likeButtonDisabled = document.querySelector('.card__like-heart');
 let likeButtonActive = document.querySelector('.card__like-heart_active');
 
@@ -83,6 +84,7 @@ function createCardElement (card) {
   const cardTitle = cardElement.querySelector('.card__title');
   const cardLikeButton = cardElement.querySelector('.card__like-button');
   const cardDeleteButton = cardElement.querySelector('.card__trash-button');
+  const likeButtonImage = cardElement.querySelector('.card__like-image');
 
 
   cardImage.src = card.link; 
@@ -119,7 +121,9 @@ function createNewCard (card) {
     newCardImage.src = addCardUrl.value; 
     newCardTitle.textContent = addCardTitle.value; 
 
-    /*cardDeleteButton.addEventListener('click', () => onTrashButtonClick (newCard)); */
+    const newCardDeleteButton = newCard.querySelector('.card__trash-button');
+
+    newCardDeleteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
 
     return newCard;
 }
@@ -131,12 +135,12 @@ function toggleModal(modalWindow) {
     modalWindow.classList.toggle('modal_open');   
 }
 
-
-
 ////Remove Card///
 const onTrashButtonClick = card => {
     placesList.removeChild(card);
 }
+
+
 
 ////Open Image Preview Modal///
 const onImagePreview = card => {
@@ -146,17 +150,26 @@ const onImagePreview = card => {
 }
 
 //change empty heart to black heart when like button clicked///
+function toggleLikeButton() {
+    var likeButtonDisabled = "https://tinyurl.com/cz4cvxb4";
+    var likeButtonActive = "https://tinyurl.com/22z93kx9";
+    
+    var likeButtonImage = document.querySelector('.card__like-image');
+ 
+    likeButtonImage.src = (likeButtonImage.src === likeButtonDisabled)? likeButtonActive : likeButtonDisabled;
+ }
 
-function toggleLikeButton(likeButtonDisabled) {
+/////////
+/*function toggleLikeButton(cardLikeButton) {
     likeButtonDisabled.src.toggle("images/heart-active.png");
-}
+}*/
+
 const onLikeButtonClick = card => {
-    document.querySelector('.card__like-heart').src = "images/heart-active.png";
+    /*const likeButtonActive = document.querySelector('.card__like-heart').src = "images/heart-active.png";*/
     toggleLikeButton();
     /*likeButtonDisabled.src = url(images/heart-active.png);*/
 }
-  
- 
+
 
 
 //////////////
