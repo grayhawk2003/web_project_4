@@ -59,10 +59,10 @@ let profileName = document.querySelector('.profile__title');
 let profileOccupation = document.querySelector('.profile__occupation');
 ///Preview Modal///
 let previewModalCloseButton = document.querySelector('.modal_close_preview');
-///Like Button Heart Image///
-let likeButtonImage = document.querySelector('.card__like-image');
-let likeButtonDisabled = document.querySelector('.card__like-heart');
-let likeButtonActive = document.querySelector('.card__like-heart_active');
+let modalCaption = document.querySelector('.modal__caption');
+
+
+
 
 
 
@@ -84,16 +84,18 @@ function createCardElement (card) {
   const cardTitle = cardElement.querySelector('.card__title');
   const cardLikeButton = cardElement.querySelector('.card__like-button');
   const cardDeleteButton = cardElement.querySelector('.card__trash-button');
-  const likeButtonImage = cardElement.querySelector('.card__like-image');
+  
 
 
   cardImage.src = card.link; 
   cardTitle.textContent = card.name;
+  modalCaption.textContent = card.name;
+  
 
   cardImage.addEventListener('click', () => onImagePreview (card));
   //handle image click//
  
-  cardLikeButton.addEventListener('click', () => onLikeButtonClick (cardElement));
+  cardLikeButton.addEventListener('click', (evt) => onLikeButtonClick (evt));
       //handle like button click//
 
   cardDeleteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
@@ -125,6 +127,10 @@ function createNewCard (card) {
 
     newCardDeleteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
 
+    const newCardLikeButton = newCard.querySelector('.card__like-button');
+
+    newCardLikeButton.addEventListener('click', (evt) => onLikeButtonClick (evt));
+
     return newCard;
 }
 
@@ -140,34 +146,20 @@ const onTrashButtonClick = card => {
     placesList.removeChild(card);
 }
 
-
-
 ////Open Image Preview Modal///
 const onImagePreview = card => {
     const modalImage = previewModal.querySelector('.modal__image');
     modalImage.src = card.link;
     toggleModal(previewModal);
+    
 }
 
-//change empty heart to black heart when like button clicked///
-function toggleLikeButton() {
-    var likeButtonDisabled = "https://tinyurl.com/cz4cvxb4";
-    var likeButtonActive = "https://tinyurl.com/22z93kx9";
-    
-    var likeButtonImage = document.querySelector('.card__like-image');
- 
-    likeButtonImage.src = (likeButtonImage.src === likeButtonDisabled)? likeButtonActive : likeButtonDisabled;
- }
 
-/////////
-/*function toggleLikeButton(cardLikeButton) {
-    likeButtonDisabled.src.toggle("images/heart-active.png");
-}*/
+//Change Like Button Heart to black////
 
-const onLikeButtonClick = card => {
-    /*const likeButtonActive = document.querySelector('.card__like-heart').src = "images/heart-active.png";*/
-    toggleLikeButton();
-    /*likeButtonDisabled.src = url(images/heart-active.png);*/
+const onLikeButtonClick = evt => {
+    const cardLikeButton = document.querySelector('.card__like-button');
+    evt.target.classList.toggle('card__like-button_type_active');
 }
 
 

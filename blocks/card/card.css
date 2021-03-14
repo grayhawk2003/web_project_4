@@ -1,11 +1,11 @@
 @import url(./__image/card__image.css);
-@import url(./__like-button/card__like-button.css);
 @import url(./__content/card__content.css);
 @import url(./__title/card__title.css);
-@import url(./__like-heart/card__like-heart.css);
+@import url(./__like-button/card__like-button.css);
+@import url(./__like-button_type_active/card__like-button_type_active.css);
 @import url(./__trash-button/card__trash-button.css);
 @import url(./__trash-image/card__trash-image.css);
-@import url(./__like-heart/_active/card__like-heart_active.css);
+
 
 .card {
     max-width: 282px;

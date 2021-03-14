@@ -1,5 +1,5 @@
-.card__like-button {
-    background-image: url(../../../images/heart.png);
+.card__like-button_type_active {
+    background-image: url(../../../images/heart-active.png);
     background-size: 100%;
     background-color: rgba(0,0,0,0);
     width: 21px;
