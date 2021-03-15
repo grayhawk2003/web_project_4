@@ -47,18 +47,18 @@ let profileModalFormOccupation = document.querySelector('.modal__input_type_occu
 //////////////////////////////////
 
 ////Add Card Modal//
-let addCardModalCloseButton = document.querySelector('.modal__close_add-card');
+let addCardModalCloseButton = document.querySelector('.modal_close-add-card');
 let addCardButton = document.querySelector('.profile__add-button');
 let addCardTitle = document.querySelector('.modal__input_type_title');
 let addCardUrl = document.querySelector('.modal__input_type_image-url');
 let addCardCreateButton =document.querySelector('.modal__submit_type_create-card');
 ////Profile Modal///
 let profileEditButton = document.querySelector('.profile__edit-button');
-let profileModalCloseButton = document.querySelector('.modal__close_profile');
+let profileModalCloseButton = document.querySelector('.modal_close-profile');
 let profileName = document.querySelector('.profile__title');
 let profileOccupation = document.querySelector('.profile__occupation');
 ///Preview Modal///
-let previewModalCloseButton = document.querySelector('.modal__close_preview');
+let previewModalCloseButton = document.querySelector('.modal_close-preview');
 let modalCaption = document.querySelector('.modal__caption');
 let newModalCaption = document.querySelector('.modal__caption');
 
@@ -158,7 +158,7 @@ const onNewImagePreview = (newCard) => {
     newModalImage.src = addCardUrl.value;
     newModalCaption.textContent = addCardTitle.value;
     toggleModal(previewModal);
-    newModalImage.classList.add('.modal__container_type_preview');
+    newModalImage.classList.add('.modal__form_type_preview');
 }
 
 
