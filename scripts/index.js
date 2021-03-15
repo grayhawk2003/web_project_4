@@ -60,9 +60,7 @@ let profileOccupation = document.querySelector('.profile__occupation');
 ///Preview Modal///
 let previewModalCloseButton = document.querySelector('.modal_close_preview');
 let modalCaption = document.querySelector('.modal__caption');
-
-
-
+let newModalCaption = document.querySelector('.modal__caption');
 
 
 
@@ -86,11 +84,9 @@ function createCardElement (card) {
   const cardDeleteButton = cardElement.querySelector('.card__trash-button');
   
 
-
   cardImage.src = card.link; 
   cardTitle.textContent = card.name;
-  modalCaption.textContent = card.name;
-  
+ 
 
   cardImage.addEventListener('click', () => onImagePreview (card));
   //handle image click//
@@ -100,7 +96,6 @@ function createCardElement (card) {
 
   cardDeleteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
   
-
   return cardElement;
 }
 
@@ -119,9 +114,13 @@ function createNewCard (card) {
 
     const newCardImage = newCard.querySelector('.card__image');
     const newCardTitle = newCard.querySelector('.card__title');
+    
 
     newCardImage.src = addCardUrl.value; 
     newCardTitle.textContent = addCardTitle.value; 
+
+    newCardImage.addEventListener('click', () => onNewImagePreview (card));
+  //handle new card image click//
 
     const newCardDeleteButton = newCard.querySelector('.card__trash-button');
 
@@ -147,11 +146,19 @@ const onTrashButtonClick = card => {
 }
 
 ////Open Image Preview Modal///
-const onImagePreview = card => {
+const onImagePreview = (card) => {
     const modalImage = previewModal.querySelector('.modal__image');
     modalImage.src = card.link;
+    modalCaption.textContent = card.name;
+    toggleModal(previewModal);   
+}
+
+const onNewImagePreview = (newCard) => {
+    const newModalImage = previewModal.querySelector('.modal__image');
+    newModalImage.src = addCardUrl.value;
+    newModalCaption.textContent = addCardTitle.value;
     toggleModal(previewModal);
-    
+    newModalImage.classList.add('.modal__container_content_preview');
 }
 
 
