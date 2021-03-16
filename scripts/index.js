@@ -81,7 +81,7 @@ function createCardElement (card) {
   const cardImage = cardElement.querySelector('.card__image');
   const cardTitle = cardElement.querySelector('.card__title');
   const cardLikeButton = cardElement.querySelector('.card__like-button');
-  const cardDeconsteButton = cardElement.querySelector('.card__trash-button');
+  const cardDeleteButton = cardElement.querySelector('.card__trash-button');
   
 
   cardImage.src = card.link; 
@@ -94,7 +94,7 @@ function createCardElement (card) {
   cardLikeButton.addEventListener('click', (evt) => onLikeButtonClick (evt));
       //handle like button click//
 
-  cardDeconsteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
+  cardDeleteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
   
   return cardElement;
 }
@@ -107,8 +107,8 @@ function renderCard (card, wrapper) {
     //or Rafael said you can shorten by combining the two:  wrapper.append(cardElement(card));
 }
 
-//Creating new card///
-function createNewCard (card) {
+//Creating new card///    **WILL REMOVE ALL CODE THAT IS COMMENTED OUT AFTER CODE REVIWER OK'S SOLUTION**
+/*function createNewCard (card) {
     const cardTemplate = document.querySelector('#card-template').content.querySelector('.places__item');
     const newCard = cardTemplate.cloneNode(true);
 
@@ -117,21 +117,22 @@ function createNewCard (card) {
     
 
     newCardImage.src = addCardUrl.value; 
+    newCard.alt = addCardTitle.value;
     newCardTitle.textContent = addCardTitle.value; 
 
     newCardImage.addEventListener('click', () => onNewImagePreview (card));
   //handle new card image click//
 
-    const newCardDeconsteButton = newCard.querySelector('.card__trash-button');
+    const newcardDeleteButton = newCard.querySelector('.card__trash-button');
 
-    newCardDeconsteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
+    newcardDeleteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
 
     const newCardLikeButton = newCard.querySelector('.card__like-button');
 
     newCardLikeButton.addEventListener('click', (evt) => onLikeButtonClick (evt));
 
     return newCard;
-}
+}*/
 
 
 
@@ -149,21 +150,22 @@ const onTrashButtonClick = card => {
 const onImagePreview = (card) => {
     const modalImage = previewModal.querySelector('.modal__image');
     modalImage.src = card.link;
+    modalImage.alt = addCardTitle.value;
     modalCaption.textContent = card.name;
     toggleModal(previewModal);   
 }
 
-const onNewImagePreview = (newCard) => {
+/***WILL REMOVE ALL CODE THAT IS COMMENTED OUT AFTER CODE REVIWER OK'S SOLUTION**
+const onNewImagePreview = (newCard) => {   
     const newModalImage = previewModal.querySelector('.modal__image');
     newModalImage.src = addCardUrl.value;
     newModalCaption.textContent = addCardTitle.value;
     toggleModal(previewModal);
     newModalImage.classList.add('.modal__form_type_preview');
-}
+}*/
 
 
 //Change Like Button Heart to black////
-
 const onLikeButtonClick = evt => {
     evt.target.classList.toggle('card__like-button_type_active');
 }
@@ -201,7 +203,7 @@ profileModalForm.addEventListener('submit', function(evt) {
 //ADDING NEW CARD BY FILLING IN FORM///
 addCardModalForm.addEventListener('submit', function(evt) {
     evt.preventDefault();    
-    const newCard = createNewCard({name: 'addCardTitle.value', link: 'addCardUrl.value'});
+    const newCard = createCardElement({name: addCardTitle.value, link: addCardUrl.value});
     placesList.prepend(newCard); 
     toggleModal(addCardModal);
 });   
