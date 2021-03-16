@@ -32,35 +32,35 @@ const initialCards = [
 /////////////  
 ///MODALS////
 /////////////
-let addCardModal = document.querySelector('.modal_type_add-card');
-let addCardModalForm = document.querySelector('.modal__form_type_add-card'); 
+const addCardModal = document.querySelector('.modal_type_add-card');
+const addCardModalForm = document.querySelector('.modal__form_type_add-card'); 
 
-let previewModal = document.querySelector('.modal_type_preview');
+const previewModal = document.querySelector('.modal_type_preview');
 
-let profileModal = document.querySelector('.modal_type_profile');
-let profileModalForm = document.querySelector('.modal__form_type_profile');
-let profileModalFormName = document.querySelector('.modal__input_type_name');
-let profileModalFormOccupation = document.querySelector('.modal__input_type_occupation');
+const profileModal = document.querySelector('.modal_type_profile');
+const profileModalForm = document.querySelector('.modal__form_type_profile');
+const profileModalFormName = document.querySelector('.modal__input_type_name');
+const profileModalFormOccupation = document.querySelector('.modal__input_type_occupation');
 
 //////////////////////////////////
 //BUTTONS and OTHER DOM ELEMENTS//
 //////////////////////////////////
 
 ////Add Card Modal//
-let addCardModalCloseButton = document.querySelector('.modal__close-button_add-card');
-let addCardButton = document.querySelector('.profile__add-button');
-let addCardTitle = document.querySelector('.modal__input_type_title');
-let addCardUrl = document.querySelector('.modal__input_type_image-url');
-let addCardCreateButton =document.querySelector('.modal__submit_type_create-card');
+const addCardModalCloseButton = document.querySelector('.modal__close-button_add-card');
+const addCardButton = document.querySelector('.profile__add-button');
+const addCardTitle = document.querySelector('.modal__input_type_title');
+const addCardUrl = document.querySelector('.modal__input_type_image-url');
+const addCardCreateButton =document.querySelector('.modal__submit_type_create-card');
 ////Profile Modal///
-let profileEditButton = document.querySelector('.profile__edit-button');
-let profileModalCloseButton = document.querySelector('.modal__close-button_profile');
-let profileName = document.querySelector('.profile__title');
-let profileOccupation = document.querySelector('.profile__occupation');
+const profileEditButton = document.querySelector('.profile__edit-button');
+const profileModalCloseButton = document.querySelector('.modal__close-button_profile');
+const profileName = document.querySelector('.profile__title');
+const profileOccupation = document.querySelector('.profile__occupation');
 ///Preview Modal///
-let previewModalCloseButton = document.querySelector('.modal__close-icon_preview');
-let modalCaption = document.querySelector('.modal__caption');
-let newModalCaption = document.querySelector('.modal__caption');
+const previewModalCloseButton = document.querySelector('.modal__close-icon_preview');
+const modalCaption = document.querySelector('.modal__caption');
+const newModalCaption = document.querySelector('.modal__caption');
 
 
 
@@ -81,7 +81,7 @@ function createCardElement (card) {
   const cardImage = cardElement.querySelector('.card__image');
   const cardTitle = cardElement.querySelector('.card__title');
   const cardLikeButton = cardElement.querySelector('.card__like-button');
-  const cardDeleteButton = cardElement.querySelector('.card__trash-button');
+  const cardDeconsteButton = cardElement.querySelector('.card__trash-button');
   
 
   cardImage.src = card.link; 
@@ -94,7 +94,7 @@ function createCardElement (card) {
   cardLikeButton.addEventListener('click', (evt) => onLikeButtonClick (evt));
       //handle like button click//
 
-  cardDeleteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
+  cardDeconsteButton.addEventListener('click', () => onTrashButtonClick (cardElement)); 
   
   return cardElement;
 }
@@ -122,9 +122,9 @@ function createNewCard (card) {
     newCardImage.addEventListener('click', () => onNewImagePreview (card));
   //handle new card image click//
 
-    const newCardDeleteButton = newCard.querySelector('.card__trash-button');
+    const newCardDeconsteButton = newCard.querySelector('.card__trash-button');
 
-    newCardDeleteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
+    newCardDeconsteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
 
     const newCardLikeButton = newCard.querySelector('.card__like-button');
 
@@ -165,7 +165,6 @@ const onNewImagePreview = (newCard) => {
 //Change Like Button Heart to black////
 
 const onLikeButtonClick = evt => {
-    const cardLikeButton = document.querySelector('.card__like-button');
     evt.target.classList.toggle('card__like-button_type_active');
 }
 
@@ -202,7 +201,7 @@ profileModalForm.addEventListener('submit', function(evt) {
 //ADDING NEW CARD BY FILLING IN FORM///
 addCardModalForm.addEventListener('submit', function(evt) {
     evt.preventDefault();    
-    const newCard = createNewCard({name: 'addCardName.value', link: 'addCardUrl.value'});
+    const newCard = createNewCard({name: 'addCardTitle.value', link: 'addCardUrl.value'});
     placesList.prepend(newCard); 
     toggleModal(addCardModal);
 });   
@@ -211,58 +210,3 @@ addCardModalForm.addEventListener('submit', function(evt) {
 
 initialCards.forEach(card => renderCard(card, placesList));
     
-    
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-/*function handleFormSubmit (evt) {
-    
-    
-} )   
-
-profileName.addEventListener('input', function(event){
-    let inputValue = event.target.value;
-    profile
-}*/
-
-
-
