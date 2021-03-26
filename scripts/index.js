@@ -117,20 +117,27 @@ function toggleModal(modalWindow) {
 }
 
 //CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
-modalContainer.addEventListener('click', (evt) => onModalContainerClick (evt));
+/*modalContainer.addEventListener('click', (evt) => onModalContainerClick (evt));
 
 const onModalContainerClick = evt => {
   toggleModal(modal);
+}*/
+
+modalContainer.addEventListener('click', () => onModalContainerClick (modal));
+
+const onModalContainerClick = modal => {  
+   toggleModal(modal); //only working for profile modal??//
 }
 
-/*const onModalContainerClick = modal => {  
+/*modalContainer.addEventListener('click', (evt) => onModalContainerClick (evt));
+const onModalContainerClick = modal => {  
    toggleModal(modal); //only working for profile modal??  And now the profile close button doesn't work//
 }*/
 
 //CLOSE ANY POP UP WHEN CLICKING ESC//
 function ESCclose(evt) {
-  if (evt.keyCode == 27) {
-    modalWindow.classList.toggle('modal_open');
+  if (evt.keyCode === 27) {
+    /*modalWindow.classList.toggle('modal_open');*/
     toggleModal(modal);
   }
 }  
