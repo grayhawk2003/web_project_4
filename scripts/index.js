@@ -32,6 +32,10 @@ const initialCards = [
 /////////////  
 ///MODALS////
 /////////////
+const modalContainer = document.querySelector('.modal__container');
+const modal = document.querySelector('.modal');
+/*const modal = document.querySelector('.modal__form');*/
+
 const addCardModal = document.querySelector('.modal_type_add-card');
 const addCardModalForm = document.querySelector('.modal__form_type_add-card'); 
 
@@ -107,67 +111,50 @@ function renderCard (card, wrapper) {
     //or Rafael said you can shorten by combining the two:  wrapper.append(cardElement(card));
 }
 
-//Creating new card///    **WILL REMOVE ALL CODE THAT IS COMMENTED OUT AFTER CODE REVIWER OK'S SOLUTION**
-/*function createNewCard (card) {
-    const cardTemplate = document.querySelector('#card-template').content.querySelector('.places__item');
-    const newCard = cardTemplate.cloneNode(true);
-
-    const newCardImage = newCard.querySelector('.card__image');
-    const newCardTitle = newCard.querySelector('.card__title');
-    
-
-    newCardImage.src = addCardUrl.value; 
-    newCard.alt = addCardTitle.value;
-    newCardTitle.textContent = addCardTitle.value; 
-
-    newCardImage.addEventListener('click', () => onNewImagePreview (card));
-  //handle new card image click//
-
-    const newcardDeleteButton = newCard.querySelector('.card__trash-button');
-
-    newcardDeleteButton.addEventListener('click', () => onTrashButtonClick (newCard)); 
-
-    const newCardLikeButton = newCard.querySelector('.card__like-button');
-
-    newCardLikeButton.addEventListener('click', (evt) => onLikeButtonClick (evt));
-
-    return newCard;
-}*/
-
-
-
 ///Toggle ANY Modal Window////
 function toggleModal(modalWindow) {  
-    modalWindow.classList.toggle('modal_open');   
+  modalWindow.classList.toggle('modal_open');   
 }
+
+//CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
+modalContainer.addEventListener('click', (evt) => onModalContainerClick (evt));
+
+const onModalContainerClick = evt => {
+  toggleModal(modal);
+}
+
+/*const onModalContainerClick = modal => {  
+   toggleModal(modal); //only working for profile modal??  And now the profile close button doesn't work//
+}*/
+
+//CLOSE ANY POP UP WHEN CLICKING ESC//
+function ESCclose(evt) {
+  if (evt.keyCode == 27) {
+    modalWindow.classList.toggle('modal_open');
+    toggleModal(modal);
+  }
+}  
+
 
 ////Remove Card///
 const onTrashButtonClick = card => {
-    placesList.removeChild(card);
+  placesList.removeChild(card);
 }
 
 ////Open Image Preview Modal///
 const onImagePreview = (card) => {
-    const modalImage = previewModal.querySelector('.modal__image');
-    modalImage.src = card.link;
-    modalImage.alt = addCardTitle.value;
-    modalCaption.textContent = card.name;
-    toggleModal(previewModal);   
+  const modalImage = previewModal.querySelector('.modal__image');
+  modalImage.src = card.link;
+  modalImage.alt = addCardTitle.value;
+  modalCaption.textContent = card.name;
+  toggleModal(previewModal);   
 }
 
-/***WILL REMOVE ALL CODE THAT IS COMMENTED OUT AFTER CODE REVIWER OK'S SOLUTION**
-const onNewImagePreview = (newCard) => {   
-    const newModalImage = previewModal.querySelector('.modal__image');
-    newModalImage.src = addCardUrl.value;
-    newModalCaption.textContent = addCardTitle.value;
-    toggleModal(previewModal);
-    newModalImage.classList.add('.modal__form_type_preview');
-}*/
 
 
 //Change Like Button Heart to black////
 const onLikeButtonClick = evt => {
-    evt.target.classList.toggle('card__like-button_type_active');
+  evt.target.classList.toggle('card__like-button_type_active');
 }
 
 
@@ -182,9 +169,9 @@ addCardModalCloseButton.addEventListener('click', () => toggleModal(addCardModal
 
 
 profileEditButton.addEventListener('click', function() {
-    profileModalFormName.value = profileName.textContent;
-    profileModalFormOccupation.value = profileOccupation.textContent;
-    toggleModal(profileModal);
+  profileModalFormName.value = profileName.textContent;
+  profileModalFormOccupation.value = profileOccupation.textContent;
+  toggleModal(profileModal);
 });
 
 
@@ -194,21 +181,22 @@ previewModalCloseButton.addEventListener('click', () => toggleModal(previewModal
 
 
 profileModalForm.addEventListener('submit', function(evt) {
-    evt.preventDefault(); 
-    profileName.textContent = profileModalFormName.value;
-    profileOccupation.textContent = profileModalFormOccupation.value;
-    toggleModal(profileModal);
+  evt.preventDefault(); 
+  profileName.textContent = profileModalFormName.value;
+  profileOccupation.textContent = profileModalFormOccupation.value;
+  toggleModal(profileModal);
 });   
 
 //ADDING NEW CARD BY FILLING IN FORM///
 addCardModalForm.addEventListener('submit', function(evt) {
-    evt.preventDefault();    
-    const newCard = createCardElement({name: addCardTitle.value, link: addCardUrl.value});
-    placesList.prepend(newCard); 
-    toggleModal(addCardModal);
+  evt.preventDefault();    
+  const newCard = createCardElement({name: addCardTitle.value, link: addCardUrl.value});
+  placesList.prepend(newCard); 
+  toggleModal(addCardModal);
 });   
 
- 
+
 
 initialCards.forEach(card => renderCard(card, placesList));
-    
+  
+
