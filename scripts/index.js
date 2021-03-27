@@ -120,9 +120,11 @@ function toggleModal(modalWindow) {
 }
 
 
+
 //CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
 const onModalContainerClick = modal => {  
-  toggleModal(modal); 
+  const openModal = document.querySelector('.modal_open');
+  toggleModal(openModal); 
 }
 
 modalContainerPreview.addEventListener('click', () => onModalContainerClick (previewModal));
@@ -136,10 +138,12 @@ modalContainerAddCard.addEventListener('click', () => onModalContainerClick (add
 //CLOSE ANY POP UP WHEN CLICKING ESC//
 function ESCclose(evt) {
   if (evt.keyCode === 27) {
-    /*modalWindow.classList.toggle('modal_open');*/
-    toggleModal(modal);
+    const openModal = document.querySelector('.modal_open');
+    toggleModal(openModal);
   }
 }  
+
+
 
 document.addEventListener("keydown", ESCclose);
 
