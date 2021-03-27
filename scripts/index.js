@@ -141,6 +141,8 @@ function ESCclose(evt) {
   }
 }  
 
+document.addEventListener("keydown", ESCclose);
+
 
 ////Remove Card///
 const onTrashButtonClick = card => {
