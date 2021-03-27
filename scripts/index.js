@@ -35,6 +35,9 @@ const initialCards = [
 const modalContainer = document.querySelector('.modal__container');
 const modal = document.querySelector('.modal');
 /*const modal = document.querySelector('.modal__form');*/
+const modalContainerPreview = document.querySelector('.modal__container_type_preview');
+const modalContainerProfile = document.querySelector('.modal__container_type_profile');
+const modalContainerAddCard = document.querySelector('.modal__container_type_add-card');
 
 const addCardModal = document.querySelector('.modal_type_add-card');
 const addCardModalForm = document.querySelector('.modal__form_type_add-card'); 
@@ -116,23 +119,19 @@ function toggleModal(modalWindow) {
   modalWindow.classList.toggle('modal_open');   
 }
 
+
 //CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
-/*modalContainer.addEventListener('click', (evt) => onModalContainerClick (evt));
-
-const onModalContainerClick = evt => {
-  toggleModal(modal);
-}*/
-
-modalContainer.addEventListener('click', () => onModalContainerClick (modal));
-
 const onModalContainerClick = modal => {  
-   toggleModal(modal); //only working for profile modal??//
+  toggleModal(modal); 
 }
 
-/*modalContainer.addEventListener('click', (evt) => onModalContainerClick (evt));
-const onModalContainerClick = modal => {  
-   toggleModal(modal); //only working for profile modal??  And now the profile close button doesn't work//
-}*/
+modalContainerPreview.addEventListener('click', () => onModalContainerClick (previewModal));
+
+modalContainerProfile.addEventListener('click', () => onModalContainerClick (profileModal));
+
+modalContainerAddCard.addEventListener('click', () => onModalContainerClick (addCardModal));
+
+
 
 //CLOSE ANY POP UP WHEN CLICKING ESC//
 function ESCclose(evt) {
@@ -156,7 +155,6 @@ const onImagePreview = (card) => {
   modalCaption.textContent = card.name;
   toggleModal(previewModal);   
 }
-
 
 
 //Change Like Button Heart to black////
