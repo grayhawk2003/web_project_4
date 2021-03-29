@@ -34,7 +34,9 @@ const initialCards = [
 /////////////
 const modalContainer = document.querySelector('.modal__container');
 const modal = document.querySelector('.modal');
+/*const modals = [profileModal, addCardModal, previewModal];*/
 /*const modal = document.querySelector('.modal__form');*/
+
 const modalContainerPreview = document.querySelector('.modal__container_type_preview');
 const modalContainerProfile = document.querySelector('.modal__container_type_profile');
 const modalContainerAddCard = document.querySelector('.modal__container_type_add-card');
@@ -61,7 +63,7 @@ const addCardUrl = document.querySelector('.modal__input_type_image-url');
 const addCardCreateButton =document.querySelector('.modal__submit_type_create-card');
 ////Profile Modal///
 const profileEditButton = document.querySelector('.profile__edit-button');
-const profileModalCloseButton = document.querySelector('.modal__close-button_profile');
+const profileModalCloseButton = document.querySelector('.modal__close-button_profile'); ///
 const profileName = document.querySelector('.profile__title');
 const profileOccupation = document.querySelector('.profile__occupation');
 ///Preview Modal///
@@ -127,12 +129,23 @@ const onModalContainerClick = modal => {
   toggleModal(openModal); 
 }
 
-modalContainerPreview.addEventListener('click', () => onModalContainerClick (previewModal));
+modalContainerPreview.addEventListener('click', function(evt) {
+  if (evt.target.classList.contains("modal__container")) {
+  onModalContainerClick (previewModal);
+  }
+}); 
 
-modalContainerProfile.addEventListener('click', () => onModalContainerClick (profileModal));
+modalContainerProfile.addEventListener('click', function(evt) {
+  if (evt.target.classList.contains("modal__container")) {
+  onModalContainerClick (profileModal);
+  }
+}); 
 
-modalContainerAddCard.addEventListener('click', () => onModalContainerClick (addCardModal));
-
+modalContainerAddCard.addEventListener('click', function(evt) {
+  if (evt.target.classList.contains("modal__container")) {
+  onModalContainerClick (addCardModal);
+  }
+}); 
 
 
 //CLOSE ANY POP UP WHEN CLICKING ESC//
@@ -142,8 +155,6 @@ function ESCclose(evt) {
     toggleModal(openModal);
   }
 }  
-
-
 
 document.addEventListener("keydown", ESCclose);
 
@@ -184,7 +195,6 @@ profileEditButton.addEventListener('click', function() {
   profileModalFormOccupation.value = profileOccupation.textContent;
   toggleModal(profileModal);
 });
-
 
 profileModalCloseButton.addEventListener('click', () => toggleModal(profileModal));
 
