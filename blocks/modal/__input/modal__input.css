@@ -1,3 +1,7 @@
+@import url(./-error/modal__input-error.css);
+@import url(./_type_error/modal__input_type_error.css);
+
+
 .modal__input {
     width: 358px;
     font-family: 'Inter', Arial, sans-serif;
@@ -23,7 +27,7 @@
     }
 }
 
-.modal__input:invalid {
+/*.modal__input:invalid {
     border-bottom: 1px solid red;
-}
+}*/
 

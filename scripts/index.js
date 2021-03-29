@@ -72,7 +72,6 @@ const modalCaption = document.querySelector('.modal__caption');
 const newModalCaption = document.querySelector('.modal__caption');
 
 
-
 //Wrappers//
 const placesList = document.querySelector('.places');
 
@@ -124,7 +123,7 @@ function toggleModal(modalWindow) {
 
 
 //CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
-const onModalContainerClick = modal => {  
+const onModalContainerClick = () => {  
   const openModal = document.querySelector('.modal_open');
   toggleModal(openModal); 
 }
@@ -219,5 +218,3 @@ addCardModalForm.addEventListener('submit', function(evt) {
 
 
 initialCards.forEach(card => renderCard(card, placesList));
-  
-
