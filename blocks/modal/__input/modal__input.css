@@ -1,6 +1,5 @@
-@import url(./-error/modal__input-error.css);
-@import url(./_type_error/modal__input_type_error.css);
-
+/*@import url(./-error/modal__input-error.css);
+@import url(./_type_error/modal__input_type_error.css);*/
 
 .modal__input {
     width: 358px;

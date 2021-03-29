@@ -1,4 +1,6 @@
-.modal__input-error {
+.modal__input-error_active {
+    display: block;
+    visibility: visible;
     margin-left: 36px;
     color: red;
     font-family: 'Inter', Arial, sans-serif;
