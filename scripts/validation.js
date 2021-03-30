@@ -3,28 +3,29 @@ const formElement = document.querySelector(".modal__form");
 /*const formInputList = Array.from(document.querySelectorAll(".modal__input"));
 const formList = Array.from(document.querySelectorAll(".modal__form"));*/
 const formInput = formElement.querySelector(".modal__input");
-const formError = formElement.querySelector(".modal__input-error");
+const formError = formElement.querySelector(`#${formInput.id}-error`);
+
+/*const formList = Array.from(document.querySelectorAll('.modal__form'));*/
 
 
 ///3 FUNCTIONS TO DEFINE INPUT FIELD'S BEHAVIOR//////
 
 ///1.  SHOW ERROR ELEMENT IN ORDER TO NOTIFY USER////
-/*const showInputError = (element, errorMessage) => {
-  formElements.forEach((formElement) => {
-
-  
+const showInputError = (element, errorMessage) => {  ///ONLY WORKS FOR FIRST FIELD////
     element.classList.add('modal__input_type_error');
     formError.textContent = errorMessage;
     formError.classList.add('modal__input-error_active');
-}) 
-};*/
+};
 
-const showInputError = (element, errorMessage) => {  ///ONLY WORKS FOR FIRST FIELD////
+/*const showInputError = (element, errorMessage) => {  ///ONLY WORKS FOR FIRST FIELD////    
+    const inputList = Array.from(documement.querySelectorAll('.modal__input'));
+    inputList.forEach((element) => {
       element.classList.add('modal__input_type_error');
       formError.textContent = errorMessage;
       formError.classList.add('modal__input-error_active');
-  
-  };
+    });
+};*/
+
 
 
 ///2.  HIDE ERROR ELEMEMENT///
@@ -55,8 +56,6 @@ const isValid = () => {
 };*/
 
 
-
-
 //EVENT LISTENERS///
 
 formElement.addEventListener("submit", function(evt) {
@@ -64,6 +63,16 @@ formElement.addEventListener("submit", function(evt) {
 });
 
 formInput.addEventListener("input", isValid);
+
+
+enableValidation({
+    formElement: ".modal__form",   //formSelector//
+    formInput: ".modal__input",    //inputSelector//
+    submitButtonSelector: ".modal__button",
+    inactiveButtonClass: ".modal__button_disabled",
+    inputErrorClass: ".modal__input_type_error",
+    errorClass: ".modal__input-error_active"
+  }); 
 
 
 
