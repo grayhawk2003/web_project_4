@@ -8,9 +8,7 @@ const formError = formElement.querySelector(`#${formInput.id}-error`);*/
 
 ///1.  SHOW ERROR ELEMENT IN ORDER TO NOTIFY USER////
 const showInputError = (formElement, inputElement, errorMessage) => {
-    // Find the error message element inside the very function
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-    // The rest remains unchanged
     inputElement.classList.add("modal__input_type_error");
     errorElement.textContent = errorMessage;
     errorElement.classList.add("modal__input-error_active");
@@ -21,7 +19,6 @@ const showInputError = (formElement, inputElement, errorMessage) => {
 const hideInputError = (formElement, inputElement) => {
     // Find the error message element
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-    // The rest remains unchanged
     inputElement.classList.remove("modal__input_type_error");
     errorElement.classList.remove("modal__input-error_active");
     errorElement.textContent = "";
@@ -36,13 +33,43 @@ const isValid = (formElement, inputElement) => {
     }
   };
 
+////FUNCTIONS TO CHECK IF BUTTON SHOULD BE ACTIVE OR NOT BASED ON VALIDITY OF ALL FIELDS/////
+
+//TO CHECK THE VALIDITY OF ALL FIELDS////
+const hasInvalidInput = (inputList) => {
+    // iterate over the array using the some() method
+    return inputList.some((inputElement) => {
+      // If the field is invalid, the callback will return true.
+      // The method will then stop, and hasInvalidInput() function will return true
+      // hasInvalidInput returns true  
+      return !inputElement.validity.valid;
+    })
+  };   
+
+//CHANGE SUBMIT BUTTON ACTIVE STATUS///
+const toggleButtonState = (inputList, buttonElement) => {
+    // If there is at least one invalid input
+    if (hasInvalidInput(inputList)) {
+      buttonElement.classList.add("modal__submit_inactive");
+     
+    } else {         
+      buttonElement.classList.remove("modal__submit_inactive");
+   
+    }
+  };   
+
 //EVENT LISTENERS///
-const setEventListeners = formElement => {
+const setEventListeners = (formElement) => {
     const inputList = Array.from(formElement.querySelectorAll('.modal__input'));
 
+    const buttonElement = formElement.querySelector(".modal__submit");
+
+    toggleButtonState(inputList, buttonElement);
+    
     inputList.forEach(inputElement => {
       inputElement.addEventListener('input', () => {
         isValid(formElement, inputElement);
+    
       });
     });
   };
@@ -61,7 +88,7 @@ const enableValidation = () => {
 
 enableValidation();
 
-  
+
   
   
  enableValidation({
