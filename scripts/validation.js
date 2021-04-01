@@ -1,9 +1,3 @@
-/////DECLARATIONS//////
-/*const formElement = document.querySelector(".modal__form");
-const formInput = formElement.querySelector(".modal__input");
-const formError = formElement.querySelector(`#${formInput.id}-error`);*/
-
-
 ///3 FUNCTIONS TO DEFINE INPUT FIELD'S BEHAVIOR//////
 
 ///1.  SHOW ERROR ELEMENT IN ORDER TO NOTIFY USER////
@@ -37,12 +31,9 @@ const isValid = (formElement, inputElement) => {
 
 //TO CHECK THE VALIDITY OF ALL FIELDS////
 const hasInvalidInput = (inputList) => {
-    // iterate over the array using the some() method
+    
     return inputList.some((inputElement) => {
-      // If the field is invalid, the callback will return true.
-      // The method will then stop, and hasInvalidInput() function will return true
-      // hasInvalidInput returns true  
-      return !inputElement.validity.valid;
+    return !inputElement.validity.valid;
     })
   };   
 
@@ -66,7 +57,6 @@ const setEventListeners = (formElement) => {
 
     const buttonElement = formElement.querySelector(".modal__submit");
 
-
     toggleButtonState(inputList, buttonElement);
     
     inputList.forEach(inputElement => {
@@ -80,7 +70,7 @@ const setEventListeners = (formElement) => {
   };
 
 const enableValidation = () => {
-    const formList = Array.from(document.querySelectorAll('.modal__form'));
+    const formList = Array.from(document.querySelectorAll('.form'));
 
     formList.forEach(formElement => {
       formElement.addEventListener('submit', event => {
@@ -91,13 +81,10 @@ const enableValidation = () => {
     });
   };
 
-enableValidation();
-
-
-  
+enableValidation(); 
   
  enableValidation({
-    formElement: ".modal__form",   //formSelector//
+    formElement: ".form",   //formSelector//
     formInput: ".modal__input",    //inputSelector//
     submitButtonSelector: ".modal__button",
     inactiveButtonClass: ".modal__button_disabled",
