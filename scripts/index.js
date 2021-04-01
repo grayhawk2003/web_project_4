@@ -93,6 +93,7 @@ function createCardElement (card) {
   
 
   cardImage.src = card.link; 
+  cardImage.alt = cardTitle.value;
   cardTitle.textContent = card.name;
  
 
