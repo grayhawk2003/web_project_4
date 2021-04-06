@@ -116,14 +116,24 @@ function renderCard (card, wrapper) {
     //or Rafael said you can shorten by combining the two:  wrapper.append(cardElement(card));
 }
 
+//CLOSE ANY POP UP WHEN CLICKING ESC//
+function ESCclose(evt) {
+  if (evt.keyCode === 27) {
+    const openModalWindow = document.querySelector('.modal_open');
+    closeModal(openModalWindow);
+  }
+}  
+
 ///OPEN ANY Modal Window////
 function openModal(modalWindow) {
   modalWindow.classList.add('modal_open');
+  document.addEventListener('keydown', ESCclose);
 }
 
 ///CLOSE ANY Modal Window////
 function closeModal(modalWindow) {
   modalWindow.classList.remove('modal_open');
+  document.removeEventListener('keydown', ESCclose);
 }
 
 //CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
@@ -151,15 +161,7 @@ modalContainerAddCard.addEventListener('click', function(evt) {
 }); 
 
 
-//CLOSE ANY POP UP WHEN CLICKING ESC//
-function ESCclose(evt) {
-  if (evt.keyCode === 27) {
-    const openModalWindow = document.querySelector('.modal_open');
-    closeModal(openModalWindow);
-  }
-}  
 
-document.addEventListener("keydown", ESCclose);
 
 
 ////Remove Card///
