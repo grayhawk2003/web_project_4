@@ -116,17 +116,20 @@ function renderCard (card, wrapper) {
     //or Rafael said you can shorten by combining the two:  wrapper.append(cardElement(card));
 }
 
-///Toggle ANY Modal Window////
-function toggleModal(modalWindow) {  
-  modalWindow.classList.toggle('modal_open');   
+///OPEN ANY Modal Window////
+function openModal(modalWindow) {
+  modalWindow.classList.add('modal_open');
 }
 
-
+///CLOSE ANY Modal Window////
+function closeModal(modalWindow) {
+  modalWindow.classList.remove('modal_open');
+}
 
 //CLOSE ANY POP UP WHEN CLICKING ON MODAL CONTAINER//
 const onModalContainerClick = () => {  
-  const openModal = document.querySelector('.modal_open');
-  toggleModal(openModal); 
+  const openModalWindow = document.querySelector('.modal_open');
+  closeModal(openModalWindow); 
 }
 
 modalContainerPreview.addEventListener('click', function(evt) {
@@ -151,8 +154,8 @@ modalContainerAddCard.addEventListener('click', function(evt) {
 //CLOSE ANY POP UP WHEN CLICKING ESC//
 function ESCclose(evt) {
   if (evt.keyCode === 27) {
-    const openModal = document.querySelector('.modal_open');
-    toggleModal(openModal);
+    const openModalWindow = document.querySelector('.modal_open');
+    closeModal(openModalWindow);
   }
 }  
 
@@ -170,7 +173,7 @@ const onImagePreview = (card) => {
   modalImage.src = card.link;
   modalImage.alt = addCardTitle.value;
   modalCaption.textContent = card.name;
-  toggleModal(previewModal);   
+  openModal(previewModal);   
 }
 
 
@@ -185,27 +188,27 @@ const onLikeButtonClick = evt => {
 //EVENT HANDLERS//
 /////////////////
 
-addCardButton.addEventListener('click', () => toggleModal(addCardModal));
+addCardButton.addEventListener('click', () => openModal(addCardModal));
 
-addCardModalCloseButton.addEventListener('click', () => toggleModal(addCardModal));
+addCardModalCloseButton.addEventListener('click', () => closeModal(addCardModal));
 
 
 profileEditButton.addEventListener('click', function() {
   profileModalFormName.value = profileName.textContent;
   profileModalFormOccupation.value = profileOccupation.textContent;
-  toggleModal(profileModal);
+  openModal(profileModal);
 });
 
-profileModalCloseButton.addEventListener('click', () => toggleModal(profileModal));
+profileModalCloseButton.addEventListener('click', () => closeModal(profileModal));
 
-previewModalCloseButton.addEventListener('click', () => toggleModal(previewModal));
+previewModalCloseButton.addEventListener('click', () => closeModal(previewModal));
 
 
 profileModalForm.addEventListener('submit', function(evt) {
   evt.preventDefault(); 
   profileName.textContent = profileModalFormName.value;
   profileOccupation.textContent = profileModalFormOccupation.value;
-  toggleModal(profileModal);
+  closeModal(profileModal);
 });   
 
 //ADDING NEW CARD BY FILLING IN FORM///
@@ -213,7 +216,7 @@ addCardModalForm.addEventListener('submit', function(evt) {
   evt.preventDefault();    
   const newCard = createCardElement({name: addCardTitle.value, link: addCardUrl.value});
   placesList.prepend(newCard); 
-  toggleModal(addCardModal);
+  closeModal(addCardModal);
 });   
 
 
