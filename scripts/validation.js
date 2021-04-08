@@ -1,20 +1,29 @@
+
+
 ///3 FUNCTIONS TO DEFINE INPUT FIELD'S BEHAVIOR//////
 
 ///1.  SHOW ERROR ELEMENT IN ORDER TO NOTIFY USER////
-const showInputError = (formElement, formInput, errorMessage) => {
+/*const showInputError = (formElement, formInput, errorMessage) => {
+    const errorElement = formElement.querySelector(`#${formInput.id}-error`);   
+    formInput.classList.add(enableValidation.inputErrorClass);
+    errorElement.textContent = errorMessage; 
+    errorElement.classList.add(enableValidation.errorClass);
+  };*/
+
+const showInputError = (formElement, formInput, errorMessage, configuration) => {
     const errorElement = formElement.querySelector(`#${formInput.id}-error`);
-    formInput.classList.add("modal__input_type_error");
+    formInput.classList.add(configuration.inputErrorClass);
     errorElement.textContent = errorMessage;
-    errorElement.classList.add("modal__input-error_active");
-  };
+    errorElement.classList.add(configuration.errorClass);
+};  
 
 
-///2.  HIDE ERROR ELEMEMENT///
-const hideInputError = (formElement, formInput) => {
+///2.  HIDE ERROR ELEMENT///
+const hideInputError = (formElement, formInput, configuration) => {
     // Find the error message element
-    const errorElement = formElement.querySelector(`#${formInput.id}-error`);
-    formInput.classList.remove("modal__input_type_error");
-    errorElement.classList.remove("modal__input-error_active");
+    const errorElement = formElement.querySelector(`#${formInput.id}-error`);    
+    formInput.classList.remove(configuration.inputErrorClass);   
+    errorElement.classList.remove(configuration.errorClass);
     errorElement.textContent = "";
   }; 
 
@@ -38,7 +47,7 @@ const hasInvalidInput = (inputList) => {
   };   
 
 //CHANGE SUBMIT BUTTON ACTIVE STATUS///
-const toggleButtonState = (inputList, buttonElement) => {
+const toggleButtonState = (inputList, buttonElement, configuration) => {
     // If there is at least one invalid input
     if (hasInvalidInput(inputList)) {
       buttonElement.classList.add("modal__submit_inactive");
@@ -52,24 +61,24 @@ const toggleButtonState = (inputList, buttonElement) => {
   };   
 
 //EVENT LISTENERS///
-const setEventListeners = (formElement) => {
-    const inputList = Array.from(formElement.querySelectorAll('.modal__input'));
+const setEventListeners = (formElement, configuration) => {
+    const inputList = Array.from(formElement.querySelectorAll(configuration.formInput));
 
-    const buttonElement = formElement.querySelector(".modal__submit");
+    /*const buttonElement = formElement.querySelector(".modal__submit");*/
 
-    toggleButtonState(inputList, buttonElement);
+    toggleButtonState(inputList, configuration.buttonElement);
     
     inputList.forEach(formInput => {
       formInput.addEventListener('input', () => {
         isValid(formElement, formInput);
     
-    toggleButtonState(inputList, buttonElement);
+    toggleButtonState(inputList, configuration.buttonElement);
 
       });
     });
   };
 
-const enableValidation = () => {
+/*const enableValidation = () => {
     const formList = Array.from(document.querySelectorAll('.form'));
 
     formList.forEach(formElement => {
@@ -79,20 +88,29 @@ const enableValidation = () => {
 
       setEventListeners(formElement);
     });
-  };
+  };*/
 
   
- enableValidation({
+  const enableValidation = configuration => {
+    const formList = Array.from(document.querySelectorAll(configuration.formElement));
+    formList.forEach(formElement => {
+        formElement.addEventListener('submit', event => {
+            event.preventDefault();
+        });
+        setEventListeners(formElement, configuration);
+    });
+};
+  
+  
+  
+  
+  
+enableValidation({
     formElement: ".form",   //formSelector//
     formInput: ".modal__input",    //inputSelector//
     submitButtonSelector: ".modal__button",
     inactiveButtonClass: ".modal__button_disabled",
     inputErrorClass: ".modal__input_type_error",
-    errorClass: ".modal__input-error_active"
+    errorClass: ".modal__input-error_active",
+    buttonElement: ".modal__submit"
   }); 
-  
-  
-  
-  
-  
-  
