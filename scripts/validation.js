@@ -49,30 +49,47 @@ const hasInvalidInput = (inputList) => {
 //CHANGE SUBMIT BUTTON ACTIVE STATUS///
 const toggleButtonState = (inputList, buttonElement, configuration) => {
     // If there is at least one invalid input
+    const buttonElementInactive = formElement.querySelector(configuration.buttonElementInactive);
+
     if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add("modal__submit_inactive");
-      /*buttonElement.setAttribute("disabled");*/
+      buttonElement.classList.add(buttonElementInactive);
+     
      
     } else {         
-      buttonElement.classList.remove("modal__submit_inactive");
-      /*buttonElement.removeAttribute("disabled");*/
+      buttonElement.classList.remove(buttonElementInactive);
+     
       buttonElement.disabled = false;
     }
   };   
+
+
+  /*const toggleButtonState = (inputList, buttonElement) => {
+    // If there is at least one invalid input
+
+    if (hasInvalidInput(inputList)) {
+      buttonElement.classList.add("modal__submit_inactive");
+     
+    } else {         
+      buttonElement.classList.remove("modal__submit_inactive");
+    }
+  }; */
+
+
+
 
 //EVENT LISTENERS///
 const setEventListeners = (formElement, configuration) => {
     const inputList = Array.from(formElement.querySelectorAll(configuration.formInput));
 
-    /*const buttonElement = formElement.querySelector(".modal__submit");*/
+    const buttonElement = formElement.querySelector(configuration.buttonElement);
 
-    toggleButtonState(inputList, configuration.buttonElement);
+    toggleButtonState(inputList, buttonElement);
     
     inputList.forEach(formInput => {
       formInput.addEventListener('input', () => {
         isValid(formElement, formInput);
     
-    toggleButtonState(inputList, configuration.buttonElement);
+    toggleButtonState(inputList, buttonElement);
 
       });
     });
@@ -102,9 +119,6 @@ const setEventListeners = (formElement, configuration) => {
 };
   
   
-  
-  
-  
 enableValidation({
     formElement: ".form",   //formSelector//
     formInput: ".modal__input",    //inputSelector//
@@ -112,5 +126,6 @@ enableValidation({
     inactiveButtonClass: ".modal__button_disabled",
     inputErrorClass: ".modal__input_type_error",
     errorClass: ".modal__input-error_active",
-    buttonElement: ".modal__submit"
+    buttonElement: ".modal__submit",
+    buttonElementInactive: ".modal__submit_inactive"
   }); 
