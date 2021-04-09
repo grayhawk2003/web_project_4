@@ -2,7 +2,7 @@
 
 ///1.  SHOW ERROR ELEMENT IN ORDER TO NOTIFY USER////
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
-    const errorElement = formElement.querySelector(`#${formInput.id}-error`);
+    const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.classList.add(settings.inputErrorClass);
     errorElement.textContent = errorMessage;
     errorElement.classList.add(settings.errorClass);
@@ -12,18 +12,18 @@ const showInputError = (formElement, inputElement, errorMessage, settings) => {
 ///2.  HIDE ERROR ELEMEMENT///
 const hideInputError = (formElement, inputElement, settings) => {
     // Find the error message element
-    const errorElement = formElement.querySelector(`#${formInput.id}-error`);
+    const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.classList.remove(settings.inputErrorClass);
     errorElement.classList.remove(settings.errorClass);
     errorElement.textContent = "";
   }; 
 
 ///3.  CHECK IF FIELD IS VALID, AND ALSO CALLS EITHER SHOWINPUTERROR() OR HIDEINPUTERROR()//////
-const isValid = (formElement, inputElement) => {
-    if (!formInput.validity.valid) {
-      showInputError(formElement, inputElement, inputElement.validationMessage);
+const isValid = (formElement, inputElement, settings) => {
+    if (!inputElement.validity.valid) {
+      showInputError(formElement, inputElement, inputElement.validationMessage, settings);
     } else {
-      hideInputError(formElement, inputElement);
+      hideInputError(formElement, inputElement, settings);
     }
   };
 
@@ -60,7 +60,7 @@ const setEventListeners = (formElement, settings) => {
     
     inputList.forEach(inputElement => {
         inputElement.addEventListener('input', () => {
-        isValid(formElement, inputElement);
+        isValid(formElement, inputElement, settings);
     
     toggleButtonState(inputList, buttonElement, settings);
 
@@ -80,12 +80,14 @@ const enableValidation = (settings) => {
     });
   };
 
+ 
+
   
  enableValidation({
     formSelector: ".form",   //.popup__form//
     inputSelector: ".modal__input",    //.popup__input//
-    submitButtonSelector: ".modal__submit",     //submitButtonSelector: ".modal__button",//
-    inactiveButtonClass: "modal__submit_inactive",     //inactiveButtonClass: "modal__button_disabled",///
+    submitButtonSelector: ".modal__submit",     //".modal__button",//
+    inactiveButtonClass: "modal__submit_inactive",     // "modal__button_disabled",///
     inputErrorClass: "modal__input_type_error",
     errorClass: "modal__input-error_active"
   }); 
